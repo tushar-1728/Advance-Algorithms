@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://aticleworld.com/struct-hack-in-c/ -->
+<html lang="en-GB" class="jetpack-lazy-images-js-enabled" slick-uniqueid="3"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+
+(function() {
+	if(typeof amzn_assoc_utils==="undefined"){amzn_assoc_utils={};}if(typeof amzn_assoc_utils.parse==="undefined"){amzn_assoc_utils.parse=(function(){var d,b,a={'"':'"',"\\":"\\","/":"/",b:"\b",f:"\f",n:"\n",r:"\r",t:"\t"},m,k=function(n){throw {name:"SyntaxError",message:n,at:d,text:m};},g=function(n){if(n&&n!==b){k("Expected '"+n+"' instead of '"+b+"'");}b=m.charAt(d);d+=1;return b;},f=function(){var o,n="";if(b==="-"){n="-";g("-");}while(b>="0"&&b<="9"){n+=b;g();}if(b==="."){n+=".";while(g()&&b>="0"&&b<="9"){n+=b;}}if(b==="e"||b==="E"){n+=b;g();if(b==="-"||b==="+"){n+=b;g();}while(b>="0"&&b<="9"){n+=b;g();}}o=+n;if(!isFinite(o)){k("Bad number");}else{return o;}},h=function(){var q,p,o="",n;if(b==='"'){while(g()){if(b==='"'){g();return o;}if(b==="\\"){g();if(b==="u"){n=0;for(p=0;p<4;p+=1){q=parseInt(g(),16);if(!isFinite(q)){break;}n=n*16+q;}o+=String.fromCharCode(n);}else{if(typeof a[b]==="string"){o+=a[b];}else{break;}}}else{o+=b;}}}k("Bad string");},j=function(){while(b&&b<=" "){g();}},c=function(){switch(b){case"t":g("t");g("r");g("u");g("e");return true;case"f":g("f");g("a");g("l");g("s");g("e");return false;case"n":g("n");g("u");g("l");g("l");return null;}k("Unexpected '"+b+"'");},l,i=function(){var n=[];if(b==="["){g("[");j();if(b==="]"){g("]");return n;}while(b){n.push(l());j();if(b==="]"){g("]");return n;}g(",");j();}}k("Bad array");},e=function(){var o,n={};if(b==="{"){g("{");j();if(b==="}"){g("}");return n;}while(b){o=h();j();g(":");if(Object.hasOwnProperty.call(n,o)){k('Duplicate key "'+o+'"');}n[o]=l();j();if(b==="}"){g("}");return n;}g(",");j();}}k("Bad object");};l=function(){j();switch(b){case"{":return e();case"[":return i();case'"':return h();case"-":return f();default:return b>="0"&&b<="9"?f():c();}};return function(p,o){var n;m=p;d=0;b=" ";n=l();j();if(b){k("Syntax error");}return n;};}());}if(typeof amzn_assoc_utils.stringify==="undefined"){amzn_assoc_utils.stringify=function(b){var a="";if(typeof JSON!=="undefined"){a=JSON.stringify(b);}return a;};}if(typeof amzn_assoc_utils.addCssRules==="undefined"){amzn_assoc_utils.addCssRules=function(g,n){var h=document.createElement("style"),m,e=0,k="";h.appendChild(document.createTextNode(""));document.head.appendChild(h);m=h.sheet;for(e=0,rl=n.length;e<rl;e++){var d=1,l=n[e],b=n[e][0],f="";if(Object.prototype.toString.call(l[1][0])==="[object Array]"){l=l[1];d=0;}for(var c=l.length;d<c;d++){var a=l[d];f+=a[0]+":"+a[1]+(a[2]?" !important":"")+";\n";}if(typeof g==="string"){m.insertRule(g+"{"+b+"{"+f+"}}",m.cssRules.length);}else{m.insertRule(b+"{"+f+"}",m.cssRules.length);}}};}window.trackingUtils=function(l,c,e,o,p,h,d,r,t,n,q){var g={},j=new RegExp("/(ref=[\\w]+)/?","i"),a="assocPayloadId",i=function(u){return u&&encodeURIComponent(u).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;");},m=(function(){var u=document.createElement("a");u.href=(window.location!==window.parent.location)?document.referrer:document.location;return u.protocol+"//"+u.hostname+((u.port===""||u.port==="80"||u.port==="443")?"":(":"+u.port))+(u.pathname.indexOf("/")!==0?("/"+u.pathname):u.pathname);}()),s=(function(){return i(m);}()),k=function(u,w,x,v){if(typeof x==="string"&&x!==""){if(u.search===""){u.search="?"+w+"="+x;}else{if(!u.search.match(new RegExp("[?&]"+w+"="))){u.search=u.search.replace(/\?/,"?"+w+"="+x+"&");}else{if(v){u.search=u.search.replace(new RegExp(w+"=([^&]*)"),w+"="+x);}}}}return u;},f=function(w,u,v){if(typeof v==="string"&&v!==""){if(!w.match(/\?/)){w=w+"?"+u+"="+v;}else{if(!w.match(u)){w=w.replace(/\?/,"?"+u+"="+v+"&");}}}return w;},b=function(v){var u=(typeof d!=="undefined")?d:0;if(typeof v!=="undefined"){u=v;}return u;};g.addRefUrls=function(z,A,v,u){var B=new RegExp("^http://.*(amazon|endless|myhabit|amazonwireless|javari|smallparts)\\.(com|ca|co\\.jp|de|fr|co\\.uk|cn|it|es)/.*","i"),w,y,x;for(x=0;x<z.length;x++){z[x].rel="nofollow";w=String(z[x].href);if(y=w.match(B)){z[x].href=g.addTrackingParameters(z[x],A,v,u);}}};g.addRefRefUrl=function(u){return k(u,"ref-refURL",s);};g.getRefRefUrl=function(){return s;};g.getRawRefUrl=function(){return m;};g.addSignature=function(v,u,w){return k(k(v,"sig",u),"sigts",w);};g.addLinkCode=function(v,u){return k(v,"linkCode",u);};g.addTrackingId=function(v,u){return k(v,"tag",u);};g.addLinkId=function(u,v){return k(u,"linkId",v);};g.addSubtag=function(u,v){return k(u,"ascsubtag",v);};g.addCreativeAsin=function(u,v){return k(k(u,"creativeASIN",v),"adId",v);};g.addAdType=function(v,u){return k(v,"adType",u);};g.addAdMode=function(u,v){return k(u,"adMode",v);};g.addAdFormat=function(v,u){return k(v,"adFormat",u);};g.addImpressionTimestamp=function(u,v){if(typeof v==="number"){v=v.toString();}return k(u,"impressionTimestamp",v);};g.convertToRedirectedUrl=function(u,x,v){var w=document.createElement("a");w.setAttribute("href",x);if(typeof v!=="undefined"){k(w,v,i(u.getAttribute("href")),true);}else{w.setAttribute("href",x+"/"+w.getAttribute("href"));}u.setAttribute("href",w.getAttribute("href"));return u;};g.getImpressionToken=function(){return h;};g.generateTransitId=function(){return g.getHashedImpressionToken();};g.getHashedImpressionToken=function(){var u=o.split("/");var v=u[u.length-2];return v;};g.getTransitId=function(){if(typeof assoc_session_storage!=="undefined"){var u=assoc_session_storage.get(a);return u;}return null;};g.getClickUrl=function(){return p;};g.addImpressionToken=function(v,w){var u=b(w);if(typeof h==="string"&&h!==""){k(v,"imprToken",h);if(typeof u!=="undefined"){k(v,"slotNum",u);}}return v;};g.addImpressionTokenStr=function(w,v){var u=b(v);if(typeof h==="string"&&h!==""){w=f(w,"imprToken",h);if(typeof u!=="undefined"){w=f(w,"slotNum",u);}}return w;};g.addTrackingParameters=function(A,B,z,E,x,u,y,w,v,F,D,C){return g.addSignature(g.addCreativeAsin(g.addLinkId(g.addTrackingId(g.addSubtag(g.addLinkCode(g.addRefRefUrl(g.addImpressionToken(g.addRefMarker(g.addAdType(g.addAdMode(g.addAdFormat(g.addImpressionTimestamp(A,C),D),F),v),x))),z),r),E),B),u),y,w);};g.addRefMarker=function(v,x){var w,u=false;if(typeof x==="undefined"){return v;}if(w=v.pathname.match(j)){v.pathname=v.pathname.replace(w[1],"ref="+x);}else{u=(v.pathname.charAt(v.pathname.length-1)==="/");v.pathname=v.pathname+(u?"":"/")+"ref="+x;}return v;};g.getRefMarker=function(u){var v;if(v=u.pathname.match(j)){return v[1].substr(4);}else{return undefined;}};g.getCurrentURL=function(){return(window.location!==window.parent.location)?document.referrer:document.location.href;};g.makeForesterCall=function(w){var u=undefined,v;if(typeof JSON!=="undefined"){v=JSON.stringify(w);}else{if(typeof amzn_assoc_utils!=="undefined"&&typeof amzn_assoc_utils.stringify==="function"){v=amzn_assoc_utils.stringify(w);}else{return;}}if(typeof o==="string"){u=o+"?assoc_payload="+encodeURIComponent(v);g.generateImage(u);}};g.recordImpression=function(w,u,z,x,B){z.linkCode=w;z.trackingId=u;z.refUrl=g.getCurrentURL();if(n||!t){g.makeForesterCall(z);}else{g.addABPFlag(z,g.makeForesterCall);}if(typeof x==="undefined"||!x){var y=(new Date()).getTime();var A=(typeof B!=="undefined")?B:"";var v=e+"?l="+w+"&t="+u+"&o="+l+"&cb="+y+A;g.generateImage(v);}};g.createAssocPayload=function(y,w,v,u){y.linkCode=w;y.trackingId=v;y.refUrl=u;var x="";if(typeof amzn_assoc_utils!=="undefined"&&typeof amzn_assoc_utils.stringify==="function"){x=amzn_assoc_utils.stringify(y);}return x;};g.recordAESImpression=function(w,u,x){if(typeof q==="string"){var z=g.createAssocPayload(x,w,u,g.getCurrentURL());var v=g.getHashedImpressionToken();var y=q+v+"/pixel?assoc_payload="+encodeURIComponent(z);g.generateImage(y);}};g.recordTransit=function(){if(!(g.getTransitId())||g.isUTMParamPresentInUrl(g.getCurrentURL())){assoc_session_storage.set(a,g.generateTransitId());}};g.isUTMParamPresentInUrl=function(v){var u=v.match(/utm_source=/i);return(u!==null);};g.addAAXClickUrls=function(v){var x,w,u;if(typeof v==="undefined"||typeof p==="undefined"){return;}for(w=0;w<v.length;w++){u=String(v[w].href);if(u.indexOf(p)<0){x=p+u;v[w].href=x;}}};g.addAAXClickUrl=function(u){if(typeof u==="undefined"||u.indexOf(p)===0){return u;}return p+u;};g.updateLinks=function(v,x){var w,u;if(typeof x!=="function"){return;}for(w=0;w<v.length;w++){u=String(v[w].href);v[w].href=x(u);}};g.elementInViewPort=function(u){var v=u.getBoundingClientRect(),w=(v.top>=0&&v.left>=0&&v.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&v.right<=(window.innerWidth||document.documentElement.clientWidth));return{posX:v.left+window.pageXOffset,posY:v.top+window.pageYOffset,inViewPort:w};};g.recordViewability=function(z,y,v,w){if(typeof o==="string"){var x=g.createViewbilityPayload(z,y,v,w);var u=o+x+"&cb="+(new Date()).getTime();g.generateImage(u);}};g.recordAESViewability=function(B,A,v,w){if(typeof q==="string"){var x=g.createViewbilityPayload(B,A,v,w);var u=g.getHashedImpressionToken();var z=encodeURIComponent(x);var y=q+u+"/pixel/"+z+"&cb="+(new Date()).getTime();g.generateImage(y);}};g.createViewbilityPayload=function(z,y,v,x){var w={};if(typeof y!=="undefined"){w.above_the_fold=y;}if(typeof v!=="undefined"){w.topPos=v;}if(typeof x!=="undefined"){w.leftPos=x;}if(typeof z!=="undefined"){if(Object.keys(w).length===0){w.viewable=true;}w.slotNum=z;}var u="";if(typeof amzn_assoc_utils!=="undefined"&&typeof amzn_assoc_utils.stringify==="function"){u=amzn_assoc_utils.stringify({adViewability:[w]});}return u;};g.generateImage=function(u){if(typeof u!=="undefined"){(new Image()).src=u;}};g.addABPFlag=function(x,F){var z=false,y=2,w=document.body?document.body.appendChild(new Image()):new Image(),v=document.body?document.body.appendChild(new Image()):new Image(),C=false,A=false,u=Math.random()*11,E=t+"?ch=*&rn=*",D=function(H,G){if(y===0||G>1000){x.supplySideMetadata={ABPInstalled:y===0&&z};H(x);}else{setTimeout(function(){D(H,G*2);},G*2);}},B=function(){if(--y){return;}z=!C&&A;};w.style.display="none";v.style.display="none";w.onload=B;w.onerror=function(){C=true;B();};w.src=E.replace(/\*/,1).replace(/\*/,u);v.onload=B;v.onerror=function(){A=true;B();};v.src=E.replace(/\*/,2).replace(/\*/,u);D(F,250);};return g;};var assoc_session_storage=(function(){var a={};a.get=function(c){var d=null;if(typeof(window.sessionStorage)!=="undefined"){try{d=window.sessionStorage.getItem(c);}catch(b){}}return d;};a.set=function(c,d){if(typeof(window.sessionStorage)!=="undefined"){try{window.sessionStorage.setItem(c,d);}catch(b){}}};return a;}());window.elemTracker=function(b){var a={};a.trackElements=function(d,c){var f,e;if(typeof d!=="undefined"&&d.length>0&&typeof c==="function"){window.addEventListener("scroll",function(){for(f=0;f<d.length;f++){e=b.elementInViewPort(d[f]);if(e.inViewPort){c();}}},false);}};return a;};
+	var amznAutoTaggerMaker=function(h,v,B){var D={CA:"ca",CN:"cn",IN:"in",DE:"de",FR:"fr",GB:"co.uk",JP:"co.jp",US:"com"},j={CA:[],CN:[],IN:[],DE:["javari"],FR:["javari"],GB:["javari"],JP:["javari"],US:["smallparts","amazonwireless","endless","myhabit"]},F=(function(){var P=-1,O={};O.getNextSlotNum=function(){return ++P;};return O;}()),q,o,e=Math.max(document.body.scrollHeight,document.body.offsetHeight,document.documentElement.clientHeight,document.documentElement.scrollHeight,document.documentElement.offsetHeight),m=Math.max(document.body.scrollWidth,document.body.offsetWidth,document.documentElement.clientWidth,document.documentElement.scrollWidth,document.documentElement.offsetWidth),y={totalDocWidth:m,totalDocHeight:e,logType:"onetag_pageload",pageTitle:document.title},a="w50",J="w61",H="g12",C={},b=new RegExp("%3F"),w=new Object(),x=false,l="",s="",u=0,L=0,d=0,G=new RegExp("amzn.to"),r=new RegExp(h.redirectorEndPoint),E=["kdp.amazon.com"],N=[],I="assocPayloadId",c=function(P){var Q,O=false;for(Q=0;Q<E.length;Q++){if(P.match(E[Q])){O=true;break;}}return O;},p=function(O){return O.nextSibling&&O.nextSibling.tagName==="IMG"&&O.nextSibling.hasAttribute("src")&&(O.nextSibling.getAttribute("src").search(/ir-[a-z]{2}\.amazon-adsystem\.com/)>-1||O.nextSibling.getAttribute("src").search(/www\.assoc-amazon\.*/)>-1);},n=function(O){if(!O.href.match(r)){O.href=h.redirectorEndPoint+O.href;}},k=function(Y,ae){var Z=new RegExp("/(ref=[\\w]+)/?","i"),U,ad=false,P,S,T=false,X=Y.search.match(/\?tag=([^&]+)|&tag=([^&]+)|\?tag-value=([^&]+)|&tag-value=([^&]+)|\?tag_value=([^&]+)|&tag_value=([^&]+)|\?t=([^&]+)|&t=([^&]+)/),R=Y.search.match(/\?tag=|&tag=|\?tag-value=|&tag-value=|\?tag_value=|&tag_value=|\?t=|&t=/),O=Y.search.match(/(linkCode|link_code|lc)=([^&]+)/i),W=v.elementInViewPort(Y),ac={autoTagged:false,overwritten:false,geoRedirected:false,atf:W.inViewPort},Q=F.getNextSlotNum(),V={destinationURL:Y.href,slotNum:Q,atfInFirstLoad:W.inViewPort,posX:W.posX,posY:W.posY,logType:"onetag_textlink"},ab=p(Y),aa;ac.slotNum=Q;if(Y.search===""){Y.search="?imprToken="+v.getImpressionToken()+"&slotNum="+Q;}else{Y.search=Y.search.replace(/\?/,"?imprToken="+v.getImpressionToken()+"&slotNum="+Q+"&");}if(h.enableAutoTagging){ac.autoTagged=true;if(X){if(h.overwrite){for(S=1;S<9;S++){if(X[S]!=undefined){Y.search=Y.search.replace(X[S],ae);break;}}ac.overwritten=true;ad=true;}}else{if(R){Y.search=Y.search.replace(/tag=/,"tag="+ae);ad=true;}else{Y.search=Y.search.replace(/\?/,"?tag="+ae+"&");ad=true;}}}if(O&&typeof h.overridableLinkCodes[O[2]]!=="undefined"){T=true;}if(O&&!T){P=O[2];}else{P=ad?a:J;}if(O){V.oldLinkCode=O[2];Y.search=Y.search.replace(O[2],P);}else{Y.search=Y.search.replace(/\?/,"?linkCode="+P+"&");}if(ad){aa=ae;}else{if(typeof X!=="undefined"&&X instanceof Array&&X.length>=S+1&&typeof X[S]==="string"){aa=X[S];}else{aa="";}}if(C.shouldBeGeoRedirected()){ac.geoRedirected=true;n(Y);}if(Y.hasAttribute("data-amzn-asin")&&!Y.search.match("creativeASIN")){Y.search=Y.search.replace(/\?/,"?creativeASIN="+Y.getAttribute("data-amzn-asin")+"&");}if(C.shouldTrackTransit(h)){v.recordTransit();V[I]=v.getTransitId();}N.push({pos:W,slotNum:Q,linkCode:P,linkInfo:V,skipIRCall:ab,imprTag:aa});Y.href=v.addAAXClickUrl(Y.href);return ac;},A=function(O){if(O.href.match(b)){o=O.href.split(b);O.href=o[0]+"?"+decodeURIComponent(o[1]);}},t=function(P,O,S){var R,Q;for(R=0;R<P.length;R++){for(Q=0;Q<O.length;Q++){if(window.addEventListener){P[R].addEventListener(O[Q],S,false);}else{P[R].attachEvent("on"+O[Q],S);}}}},K=function(O,P){var Q=false;t([O],["touchstart"],function(){Q=false;});t([O],["touchmove"],function(){Q=true;});t([O],["click","touchend"],function(R){if(Q){return;}O.setAttribute("href",P);});t([O],["auxclick","contextmenu"],function(R){O.setAttribute("href",P);});t([O],["mouseup"],function(R){if(R.button===1||R.ctrlKey){O.setAttribute("href",P);}});},M=function(){var O="";for(i=0;i<h.itemRefs.length;i++){if(typeof h.itemRefs[i].type!=="undefined"&&h.itemRefs[i].type==="ASIN"&&typeof h.itemRefs[i].sourceLink!=="undefined"&&String(h.itemRefs[i].sourceLink).match(G)!==null&&typeof h.itemRefs[i].destinationLink!=="undefined"){w[h.itemRefs[i].sourceLink]=h.itemRefs[i].destinationLink;if(l!==""){O=",";}l=l+O+h.itemRefs[i].sourceLink;u++;}}},f=function(P,O){B.trackElements([P],function(){if(typeof O!==undefined&&O.slotNum!==undefined&&(O.viewed===undefined||!O.viewed)){v.recordViewability(O.slotNum);if(C.shouldInteractWithAES(h)){v.recordAESViewability(O.slotNum);}O.viewed=true;}});},g=function(O,P){K(O,O.getAttribute("href"));O.setAttribute("href",P);},z=function(){var Q,P,O;for(Q=0;Q<N.length;Q++){P=N[Q];O=P.pos;v.recordImpression(P.linkCode,P.imprTag,P.linkInfo,P.skipIRCall,P.slotNum);v.recordViewability(P.slotNum,O.inViewPort,O.posX,O.posY);if(C.shouldInteractWithAES(h)){v.recordAESImpression(P.linkCode,P.imprTag,P.linkInfo);v.recordAESViewability(P.slotNum,O.inViewPort,O.posX,O.posY);}}N=[];};if(h.locale!=undefined){q=h.locale;}else{q="US";}C.shouldBeGeoRedirected=function(){return h.enableGeoRedirection&&(h.region!==""&&h.region!==h.viewerCountry);};C.publisherCallBack=function(){window["amzn_assoc_client_cb_"+h.adUnitSlotNum]({type:"onload",data:{},widget:C});};C.decorateLinkElement=function(O){A(O);linkProperties=k(O,h.trackingId);f(O,linkProperties);return linkProperties;};C.shouldTrackTransit=function(O){return((typeof O.disableTransitTracking==="undefined")||!O.disableTransitTracking);};C.shouldInteractWithAES=function(O){return((typeof O.enableAESInteraction!=="undefined")&&O.enableAESInteraction);};C.tagLinks=function(af){var ah,ag,P,aa,aj,ac=[],al=0,X,Z,ai,ae,ak,O,Y,V=0,R=0,ab=0,Q=0,U=0,S=0,T,W,ad="";P=D[q];aa=j[q];aj=new RegExp("^(http|https)://(www|[\\w\\-\\.]+)?amazon\\.("+P+")/","i");if(aa){for(al=0;al<aa.length;al++){X=P;if(P=="co.jp"){X="co.jp|jp";}ac[al]=new RegExp("^(http|https)://(www\\.)?("+aa[al]+")\\.("+X+")/","i");}}Z=af.getElementsByTagName("a");if(!x){M();x=true;}for(ah=0;ah<Z.length;ah++){Y=undefined;ai=String(Z[ah].href);if(ae=ai.match(aj)&&!c(ai)){Y=C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}else{if(h.isShortLinksSupported&&(ak=ai.match(G))!==null){L++;if(s!==""){ad=",";}s=s+ad+Z[ah].href;T=w[Z[ah].href];if(typeof T!=="undefined"){d++;Z[ah].setAttribute("href",T);Y=C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}else{if(C.shouldBeGeoRedirected()){Y=C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}}}else{for(O=0;O<ac.length;O++){if(ae=ai.match(ac[O])){C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}}}}if(typeof Y!=="undefined"){if(Y.autoTagged){R++;}if(Y.overwritten){S++;}if(Y.geoRedirected){ab++;}if(Y.atf){Q++;}else{U++;}V++;}}y.numLinks=V;y.numAutoTaggedLinks=R;y.autoTaggingEnabled=h.enableAutoTagging;y.geoRedirectEnabled=h.enableGeoRedirection;y.disableTransitTracking=h.disableTransitTracking;y.numLinksATF=Q;y.numLinksBTF=U;y.shortLinksInLivePool=l;y.shortLinksInPage=s;y.shortLinksInLivePoolCount=u;y.shortLinksInPageCount=L;y.shortLinksMatchCount=d;if(C.shouldTrackTransit(h)){v.recordTransit();y[I]=v.getTransitId();}v.recordImpression(h.linkCode,h.trackingId,y);if(C.shouldInteractWithAES(h)){v.recordAESImpression(h.linkCode,h.trackingId,y);}t([window],["load"],z);};return C;};
+    var spec = {
+        trackingId : "aticleworld02-20",
+        region : "US",
+        overwrite : false,
+        enableAutoTagging : false,
+        linkCode : "w49",
+        overridableLinkCodes :  {   "am1": ""   , "am2": ""   , "am3": ""   , "as1": ""   , "as2": ""   , "as3": ""   , "as4": ""   , "li1": ""   , "li2": ""   , "li3": ""   , "ll1": ""   , "ll2": ""   },
+        enableGeoRedirection : true,
+        redirectorEndPoint : "https://assoc-redirect.amazon.com/g/r/",
+        adUnitSlotNum : "0",
+        itemRefs : [],
+        isShortLinksSupported : true,
+        viewerCountry : "DE",
+        disableTransitTracking : false,
+        enableAESInteraction : false
+    }, trackingUtils = window.trackingUtils(
+        "1",
+        "//fls-na.amazon-adsystem.com/1/associates-ads/1/OP/r/json",
+        "//ir-na.amazon-adsystem.com/e/ir",
+        "https://aax-us-east.amazon-adsystem.com/x/px/QovBRHTdq6PmR_cpA9-f6z0AAAFuTEP74wEAAAFKAatPuwM/", "https://aax-us-east.amazon-adsystem.com/x/c/QovBRHTdq6PmR_cpA9-f6z0AAAFuTEP74wEAAAFKAatPuwM/", "evesXg0GshEzYnjWGWtYhA", undefined, undefined, undefined, true,
+        "https://assoc-na.associate-amazon.com/onetag/"
+    );
+
+    window.amznAutoTagger = amznAutoTaggerMaker(spec, trackingUtils, window.elemTracker(trackingUtils));
+    window.amznAutoTagger.tagLinks(document);
+    window.amznAutoTagger.publisherCallBack();
+}());
+
+ //# sourceURL=dynscript-0.js</script><script src="./What is importance of struct hack in c_ - AticleWorld_files/a0u7b2h4d0_popups.js.download" async=""></script><script type="text/javascript" async="" src="./What is importance of struct hack in c_ - AticleWorld_files/analytics.js.download"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://aticleworld.com/xmlrpc.php">
+<title>What is importance of struct hack in c? - AticleWorld</title>
+<!-- This site is optimized with the Yoast SEO plugin v12.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://aticleworld.com/struct-hack-in-c/">
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What is importance of struct hack in c? - AticleWorld">
+<meta property="og:description" content="Previously when C99 had not introduced flexible array, people used the technique of struct hack to create the flexible length member. The struct hack technique gives the permission to the user to create a variable length member in the structure. In struct hack techniques, we need to create an array... Continue reading">
+<meta property="og:url" content="https://aticleworld.com/struct-hack-in-c/">
+<meta property="og:site_name" content="AticleWorld">
+<meta property="article:section" content="C Language">
+<meta property="article:published_time" content="2017-09-15T13:25:21+00:00">
+<meta property="article:modified_time" content="2019-08-15T06:04:23+00:00">
+<meta property="og:updated_time" content="2019-08-15T06:04:23+00:00">
+<meta property="og:image" content="https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/09/struct-hack-in-c.jpg?fit=800%2C400&amp;ssl=1">
+<meta property="og:image:secure_url" content="https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/09/struct-hack-in-c.jpg?fit=800%2C400&amp;ssl=1">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="400">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="Previously when C99 had not introduced flexible array, people used the technique of struct hack to create the flexible length member. The struct hack technique gives the permission to the user to create a variable length member in the structure. In struct hack techniques, we need to create an array... Continue reading">
+<meta name="twitter:title" content="What is importance of struct hack in c? - AticleWorld">
+<meta name="twitter:image" content="https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/09/struct-hack-in-c.jpg?fit=800%2C400&amp;ssl=1">
+<script async="" src="./What is importance of struct hack in c_ - AticleWorld_files/universal.js.download"></script><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://aticleworld.com/#website","url":"https://aticleworld.com/","name":"AticleWorld","potentialAction":{"@type":"SearchAction","target":"https://aticleworld.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://aticleworld.com/struct-hack-in-c/#primaryimage","url":"https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/09/struct-hack-in-c.jpg?fit=800%2C400&ssl=1","width":800,"height":400,"caption":"struct hack in c"},{"@type":"WebPage","@id":"https://aticleworld.com/struct-hack-in-c/#webpage","url":"https://aticleworld.com/struct-hack-in-c/","inLanguage":"en-GB","name":"What is importance of struct hack in c? - AticleWorld","isPartOf":{"@id":"https://aticleworld.com/#website"},"primaryImageOfPage":{"@id":"https://aticleworld.com/struct-hack-in-c/#primaryimage"},"datePublished":"2017-09-15T13:25:21+00:00","dateModified":"2019-08-15T06:04:23+00:00","author":{"@id":"https://aticleworld.com/#/schema/person/1028e41a2baa7203d71f1888e8c6de32"}},{"@type":["Person"],"@id":"https://aticleworld.com/#/schema/person/1028e41a2baa7203d71f1888e8c6de32","name":"Amlendra","description":"I am an embedded c software engineer and a corporate trainer, currently, I am working as senior software engineer in a largest Software consulting company . I have working experience of different microcontrollers (stm32, LPC, PIC AVR and 8051), drivers (USB and virtual com-port), POS device (VeriFone) and payment gateway (global and first data).","sameAs":[]}]}</script>
+<!-- / Yoast SEO plugin. -->
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="AticleWorld » Feed" href="https://aticleworld.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="AticleWorld » Comments Feed" href="https://aticleworld.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="AticleWorld » What is importance of struct hack in c? Comments Feed" href="https://aticleworld.com/struct-hack-in-c/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/aticleworld.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.4"}};
+!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+</script><script src="./What is importance of struct hack in c_ - AticleWorld_files/wp-emoji-release.min.js(1).download" type="text/javascript" defer=""></script>
+<!-- managing ads with Advanced Ads – https://wpadvancedads.com/ --><script data-wpfc-render="false">
+advanced_ads_ready=function(){var fns=[],listener,doc=typeof document==="object"&&document,hack=doc&&doc.documentElement.doScroll,domContentLoaded="DOMContentLoaded",loaded=doc&&(hack?/^loaded|^c/:/^loaded|^i|^c/).test(doc.readyState);if(!loaded&&doc){listener=function(){doc.removeEventListener(domContentLoaded,listener);window.removeEventListener("load",listener);loaded=1;while(listener=fns.shift())listener()};doc.addEventListener(domContentLoaded,listener);window.addEventListener("load",listener)}return function(fn){loaded?setTimeout(fn,0):fns.push(fn)}}();
+</script><style type="text/css">
+img.wp-smiley,
+img.emoji {
+display: inline !important;
+border: none !important;
+box-shadow: none !important;
+height: 1em !important;
+width: 1em !important;
+margin: 0 .07em !important;
+vertical-align: -0.1em !important;
+background: none !important;
+padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="./What is importance of struct hack in c_ - AticleWorld_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-date-remover-css" href="./What is importance of struct hack in c_ - AticleWorld_files/wp-date-remover-public.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpProQuiz_front_style-css" href="./What is importance of struct hack in c_ - AticleWorld_files/wpProQuiz_front.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="tt-easy-google-fonts-css" href="./What is importance of struct hack in c_ - AticleWorld_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="thebreakingnews-fonts-css" href="./What is importance of struct hack in c_ - AticleWorld_files/css(1)" type="text/css" media="all">
+<link rel="stylesheet" id="thebreakingnews-icons-css" href="./What is importance of struct hack in c_ - AticleWorld_files/font-awesome.css" type="text/css" media="all">
+<link rel="stylesheet" id="thebreakingnews-framework-css" href="./What is importance of struct hack in c_ - AticleWorld_files/bootstrap.css" type="text/css" media="all">
+<link rel="stylesheet" id="thebreakingnews-style-css" href="./What is importance of struct hack in c_ - AticleWorld_files/style(1).css" type="text/css" media="all">
+<style id="thebreakingnews-style-inline-css" type="text/css">
+a:hover, a:focus, .hentry .entry-category a, #masthead .main-navigation ul li:hover > a {color: #f16334;} 
+.thumb-link .review-score-bar { background: #f16334; } 
+</style>
+<link rel="stylesheet" id="tablepress-default-css" href="./What is importance of struct hack in c_ - AticleWorld_files/default.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="enlighter-local-css" href="./What is importance of struct hack in c_ - AticleWorld_files/EnlighterJS.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="./What is importance of struct hack in c_ - AticleWorld_files/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/jquery.js.download"></script>
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/jquery-migrate.min.js.download"></script>
+<script src="./What is importance of struct hack in c_ - AticleWorld_files/2anmc.js.download" type="text/javascript"></script>
+<!-- <script type='text/javascript' src='https://aticleworld.com/wp-content/plugins/wp-date-remover/public/js/wp-date-remover-public.js?ver=1.0.0'></script> -->
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/spin.min.js.download"></script><style type="text/css"></style>
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/jquery.spin.min.js.download"></script>
+<link rel="https://api.w.org/" href="https://aticleworld.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://aticleworld.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://aticleworld.com/wp-includes/wlwmanifest.xml"> 
+<link rel="shortlink" href="https://wp.me/p7T66n-qJ">
+<link rel="alternate" type="application/json+oembed" href="https://aticleworld.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faticleworld.com%2Fstruct-hack-in-c%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://aticleworld.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faticleworld.com%2Fstruct-hack-in-c%2F&amp;format=xml">
+<link rel="dns-prefetch" href="https://v0.wordpress.com/">
+<link rel="dns-prefetch" href="https://jetpack.wordpress.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://s1.wp.com/">
+<link rel="dns-prefetch" href="https://s2.wp.com/">
+<link rel="dns-prefetch" href="https://public-api.wordpress.com/">
+<link rel="dns-prefetch" href="https://0.gravatar.com/">
+<link rel="dns-prefetch" href="https://1.gravatar.com/">
+<link rel="dns-prefetch" href="https://2.gravatar.com/">
+<link rel="dns-prefetch" href="https://i0.wp.com/">
+<link rel="dns-prefetch" href="https://i1.wp.com/">
+<link rel="dns-prefetch" href="https://i2.wp.com/">
+<link rel="dns-prefetch" href="https://c0.wp.com/">
+<style type="text/css">img#wpstats{display:none}</style>	<!--[if lt IE 9]>
+<script src="https://aticleworld.com/wp-content/themes/thebreakingnews/js/html5.js"></script>
+<script src="https://aticleworld.com/wp-content/themes/thebreakingnews/js/respond.js"></script>
+<![endif]-->
+<link rel="shortcut icon" href="https://i0.wp.com/aticleworld.com/wp-content/uploads/2017/11/favcon.png" title="Favicon">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./What is importance of struct hack in c_ - AticleWorld_files/js"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-86819366-1');
+</script>
+<!-- end google analytics Universal -->
+<!-- MailerLite Universal -->
+<script>
+(function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?'+(~~(new Date().getTime()/10000000));
+_.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+var ml_account = ml('accounts', '849687', 'a0u7b2h4d0', 'load');
+</script>
+<!-- End MailerLite Universal -->
+<!-- Amazon Start-->
+<script src="./What is importance of struct hack in c_ - AticleWorld_files/onejs"></script><link rel="stylesheet" type="text/css" href="./What is importance of struct hack in c_ - AticleWorld_files/universal.css" media="all"><script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/webforms.min.js.download"></script><script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/ml_jQuery.inputmask.bundle.min.js.download"></script><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head><body class="post-template-default single single-post postid-1657 single-format-standard group-blog elementor-default" itemscope="itemscope" itemtype="http://schema.org/WebPage"><div id="amzn_assoc_ad_div_adunit_0"></div>
+<!-- Amazon End-->
+<style type="text/css">
+.site-title,
+.site-description {
+position: absolute;
+clip: rect(1px, 1px, 1px, 1px);
+}
+</style>
+<style type="text/css">
+/* If html does not have either class, do not show lazy loaded images. */
+html:not( .jetpack-lazy-images-js-enabled ):not( .js ) .jetpack-lazy-image {
+display: none;
+}
+</style>
+<script>
+document.documentElement.classList.add(
+'jetpack-lazy-images-js-enabled'
+);
+</script>
+<style type="text/css" id="wp-custom-css">
+/*Main heading size*/
+.single .hentry .entry-title, .page .hentry .entry-title {
+font-size: 1.743em;
+line-height: 1.13;
+}
+/*Disapear tag*/
+.hentry .entry-category a {
+display: none;
+}
+/*Remove related post display*/
+.related-posts {
+display: none;
+}
+/*Enlighter code*/
+.EnlighterJS {
+width: auto;
+overflow-x: auto;
+word-wrap: normal;
+}
+ol.EnlighterJS,
+ul.EnlighterJS {
+display: grid;
+}
+.EnlighterJS li {
+white-space: pre;
+}			</style>
+<style id="tt-easy-google-font-styles" type="text/css">p { font-family: 'Raleway'; font-style: normal; font-weight: 400; text-decoration: none; text-transform: none; }
+h1 { font-family: 'Raleway'; font-style: normal; font-weight: 100; }
+h2 { font-family: 'Raleway'; font-style: normal; font-weight: 100; }
+h3 { font-family: 'Century Gothic'; font-style: normal; font-weight: 400; }
+h4 { font-family: 'Raleway'; font-style: normal; font-weight: 100; text-decoration: none; text-transform: none; }
+h5 { font-family: 'Raleway'; font-style: normal; font-weight: 100; }
+h6 { }
+</style>
+
+<div id="page" class="hfeed site">
+<a class="skip-link screen-reader-text" href="https://aticleworld.com/struct-hack-in-c/#content">Skip to content</a>
+<div id="header-search-box">
+<div class="container">
+<form method="get" class="header-searchform form-inline" action="https://aticleworld.com/" role="search">
+<div class="header-searchform-inner">
+<input type="text" class="field" name="s" value="" id="s" placeholder="To search type and hit enter">
+<button type="submit" class="submit"><i class="fa fa-search" title="search button"></i></button>
+</div><!-- .header-searchform-inner -->
+</form><!-- .header-searchform -->
+</div><!-- .container -->
+</div><!-- .header-search-box -->
+<header id="masthead" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+<div class="container">
+<div class="clearfix header-inner">
+<div class="site-branding pull-left">
+<div class="website-logo">
+<a href="https://aticleworld.com/" rel="home">
+<img src="./What is importance of struct hack in c_ - AticleWorld_files/sitelogo1.png" alt="AticleWorld" width="340" height="90" scale="1.25">
+</a>
+</div><!-- .website-logo -->
+<h1 class="site-title main-font" itemprop="headline"><a href="https://aticleworld.com/" rel="home">AticleWorld</a></h1>
+<h2 class="site-description main-font has-opacity" itemprop="description">aticleworld offer c tutorial,c programming,c courses and c++, microcontroller tips</h2>
+</div><!-- .site-branding -->
+<div class="header-controls pull-right">
+<div class="social-list"><ul id="menu-social" class="menu-items list-unstyled"><li id="menu-item-1980" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1980"><a href="https://www.facebook.com/Aticleworld-602608163238897/"><span class="screen-reader-text">Facebook</span></a></li>
+<li id="menu-item-1981" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1981"><a href="https://www.linkedin.com/in/amlendra-kumar-bb3b2096/"><span class="screen-reader-text">Linkedin</span></a></li>
+<li id="menu-item-1982" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1982"><a href="https://plus.google.com/u/0/103635803767777469765"><span class="screen-reader-text">Google+</span></a></li>
+<li id="menu-item-1983" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1983"><a href="https://twitter.com/aticleworld"><span class="screen-reader-text">Twitter</span></a></li>
+</ul></div>					<a id="header-search-button" href="https://aticleworld.com/struct-hack-in-c/#"><i class="fa fa-search"></i></a>
+</div><!-- .header-controls -->
+</div><!-- .header-inner -->
+</div><!-- .container -->
+<div class="container">
+<div id="mobile-site-navigation"><div class="slicknav_menu"><a href="https://aticleworld.com/struct-hack-in-c/#" aria-haspopup="true" tabindex="0" class="slicknav_btn slicknav_collapsed" style=""><span class="slicknav_menutxt">Menu</span><span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><ul class="slicknav_nav slicknav_hidden" style="display: none;" aria-hidden="true" role="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-355"><a href="https://aticleworld.com/" role="menuitem" tabindex="-1">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2974"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/c-tutorial/" role="menuitem" tabindex="-1">C Tutorial</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3807"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/c-programming/" role="menuitem" tabindex="-1">C Programming for Beginners</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3746 slicknav_collapsed slicknav_parent"><a href="https://aticleworld.com/struct-hack-in-c/#" role="menuitem" aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row" style=""><a href="https://aticleworld.com/c-interview-questions/" tabindex="-1">Interview Questions</a>
+<span class="slicknav_arrow">►</span></a><ul class="sub-menu slicknav_hidden" role="menu" style="display: none;" aria-hidden="true">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3745"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/c-interview-questions/" role="menuitem" tabindex="-1">C Interview Questions</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3747"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/embedded-c-interview-questions-2/" role="menuitem" tabindex="-1">Embedded C Interviews</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3748"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/interview-questions-on-bitwise-operators-in-c/" role="menuitem" tabindex="-1">Interview Questions On bitwise Operators C</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3750"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/10-interview-question-on-dynamic-memory-allocation/" role="menuitem" tabindex="-1">Interview Questions On Memory Allocation C</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3749"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/string-interview-questions-in-c/" role="menuitem" tabindex="-1">Interview Questions on string C</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3817"><a target="_blank" rel="noopener noreferrer" href="https://click.linksynergy.com/deeplink?id=UajS5soDmWY&amp;mid=39197&amp;murl=https%3A%2F%2Fwww.udemy.com%2Fc-interview-questions%2F" role="menuitem" tabindex="-1">Multiple Choice Questions In C</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4397"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/i2c-interview-questions/" role="menuitem" tabindex="-1">I2C Interview Questions</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4132"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/cpp-interview-questions/" role="menuitem" tabindex="-1">C++ Interview Questions</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-5062"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/can-protocol-interview-questions-and-answers-in-detail/" role="menuitem" tabindex="-1">Can protocol interview questions</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2290"><a href="https://aticleworld.com/c-video-courses/" role="menuitem" tabindex="-1">Courses</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3330"><a href="https://aticleworld.com/resources-2/" role="menuitem" tabindex="-1">Resources</a></li>
+</ul></div></div><!-- #mobile-site-navigation -->
+</div><!-- .container -->
+<nav id="site-navigation" class="main-navigation" role="navigation" data-small-nav-title="Menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+<div class="container">
+<ul id="menu-primary-menu" class="nav-bar"><li id="menu-item-355" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-355"><a href="https://aticleworld.com/">Home</a></li>
+<li id="menu-item-2974" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2974"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/c-tutorial/">C Tutorial</a></li>
+<li id="menu-item-3807" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3807"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/c-programming/">C Programming for Beginners</a></li>
+<li id="menu-item-3746" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3746"><a href="https://aticleworld.com/c-interview-questions/">Interview Questions</a>
+<ul class="sub-menu">
+<li id="menu-item-3745" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3745"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/c-interview-questions/">C Interview Questions</a></li>
+<li id="menu-item-3747" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3747"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/embedded-c-interview-questions-2/">Embedded C Interviews</a></li>
+<li id="menu-item-3748" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3748"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/interview-questions-on-bitwise-operators-in-c/">Interview Questions On bitwise Operators C</a></li>
+<li id="menu-item-3750" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3750"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/10-interview-question-on-dynamic-memory-allocation/">Interview Questions On Memory Allocation C</a></li>
+<li id="menu-item-3749" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3749"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/string-interview-questions-in-c/">Interview Questions on string C</a></li>
+<li id="menu-item-3817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3817"><a target="_blank" rel="noopener noreferrer" href="https://click.linksynergy.com/deeplink?id=UajS5soDmWY&amp;mid=39197&amp;murl=https%3A%2F%2Fwww.udemy.com%2Fc-interview-questions%2F">Multiple Choice Questions In C</a></li>
+<li id="menu-item-4397" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4397"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/i2c-interview-questions/">I2C Interview Questions</a></li>
+<li id="menu-item-4132" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4132"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/cpp-interview-questions/">C++ Interview Questions</a></li>
+<li id="menu-item-5062" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-5062"><a target="_blank" rel="noopener noreferrer" href="https://aticleworld.com/can-protocol-interview-questions-and-answers-in-detail/">Can protocol interview questions</a></li>
+</ul>
+</li>
+<li id="menu-item-2290" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2290"><a href="https://aticleworld.com/c-video-courses/">Courses</a></li>
+<li id="menu-item-3330" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3330"><a href="https://aticleworld.com/resources-2/">Resources</a></li>
+</ul>						</div><!-- .container -->
+</nav><!-- #site-navigation -->
+</header><!-- #masthead -->
+<div id="content" class="site-content container">
+<div class="row">
+<div id="primary" class="content-area col-lg-8 col-md-8">
+<main id="main" class="site-main" role="main" itemprop="mainContentOfPage">
+<article id="post-1657" class="post-1657 post type-post status-publish format-standard has-post-thumbnail hentry category-c-language" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header class="entry-header">
+<div class="entry-category"><a href="https://aticleworld.com/category/c-language/" rel="category tag" itemprop="articleSection">C Language</a></div><!-- .entry-category -->
+<h1 class="entry-title" itemprop="name headline">What is importance of struct hack in c?</h1>
+<div class="entry-meta clearfix">
+<div class="author-avatar pull-left"></div><!-- .author-avatar --><div class="entry-meta-inner pull-left"><div class="posted-inner">by <span class="author vcard" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><a class="url fn n" href="https://aticleworld.com/author/pritosh/" itemprop="name">Amlendra</a></span>on <a href="https://aticleworld.com/struct-hack-in-c/" rel="bookmark"><time class="entry-date published" datetime="" itemprop="datePublished" style="display: none;"></time><time class="updated" datetime="" itemprop="dateModified"></time></a></div><!-- .posted-inner --></div>
+<div class="entry-comments pull-right">
+<a href="https://aticleworld.com/struct-hack-in-c/#comments"><span itemprop="interactionCount">2</span></a>			</div><!-- .entry-comments -->
+</div><!-- .entry-meta -->
+</header><!-- .entry-header -->
+<div class="entry-content">
+<div class="post-thumb">
+<img width="800" height="400" src="./What is importance of struct hack in c_ - AticleWorld_files/struct-hack-in-c.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image jetpack-lazy-image jetpack-lazy-image--handled" alt="struct hack in c" itemprop="image" data-attachment-id="2023" data-permalink="https://aticleworld.com/struct-hack-in-c/struct-hack-in-c-2/" data-orig-file="https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/09/struct-hack-in-c.jpg?fit=800%2C400&amp;ssl=1" data-orig-size="800,400" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="" data-image-description="" data-medium-file="https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/09/struct-hack-in-c.jpg?fit=800%2C400&amp;ssl=1" data-large-file="https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/09/struct-hack-in-c.jpg?fit=800%2C400&amp;ssl=1" srcset="https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/09/struct-hack-in-c.jpg?w=800&amp;ssl=1 800w, https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/09/struct-hack-in-c.jpg?resize=768%2C384&amp;ssl=1 768w" data-lazy-loaded="1" sizes="(max-width: 800px) 100vw, 800px">
+<div class="post-thumb-caption">
+</div><!-- .post-thumb-caption -->
+</div><!-- .post-thumb -->
+<div itemprop="articleBody">
+<p><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;">Previously when C99 had not introduced <a href="https://aticleworld.com/flexible-array-member/" target="_blank" rel="noopener noreferrer">flexible array</a>, people used the technique of struct hack to create the flexible length member. The struct hack technique gives the permission to the user to create a variable length member in the structure.</span></p><div class="aticl-add-position" id="aticl-1213309735"><script async="" src="./What is importance of struct hack in c_ - AticleWorld_files/f.txt"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-7777591694326612" data-ad-slot="2359476209" data-ad-layout="in-article" data-ad-format="fluid"></ins>
+<script> 
+(adsbygoogle = window.adsbygoogle || []).push({}); 
+</script>
+</div>
+<p><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;">In struct hack techniques, we need to create an <a href="https://aticleworld.com/array-in-c/" target="_blank" rel="noopener noreferrer">array </a>whose length is 0 (some compiler does not support the 0 size array).When we create a zero size array then structure becomes the incomplete type. Basically, an incomplete type structure is a type that has lack </span><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;">of information about its member.</span></p>
+<p><span style="font-size: 12pt;"><strong><span style="font-family: helvetica, arial, sans-serif;">Let’s take an example to understand the techniques of struct hack,</span></strong></span></p>
+<p><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;">As I have mentioned above, if we create an incomplete type member in the structure, the structure becomes incomplete types and this technique is called struct hack.</span></p>
+<p><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;">In below structure I am creating a character array to store student name, I am giving the length of the array 0 (some compiler does not support 0 length array, in that scenario we have to take the length of the array 1).</span></p>
+<pre class="show-title:false nums:false lang:c decode:true">typedef struct
+{
+
+    int RollNumber;
+
+    int TotalMarks;
+
+    char Name[0];
+
+} sStudentInfo;
+</pre>
+<h4></h4>
+<h4><span style="font-family: helvetica, arial, sans-serif;">What is the size of the struct hack?</span></h4>
+<p><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;">When we calculate the size of the structure then we found that compiler does not include the size of the 0 length array (Name[0]). So if we assume the size of the integer is 4 bytes, the size of the structure become (Here we assume <a href="https://aticleworld.com/data-alignment-and-structure-padding-bytes/" target="_blank" rel="noopener noreferrer">alignment </a>is 4 bytes) 8 bytes.</span></p>
+<p><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;"><strong>sizeof(sStudentInfo) = sizeof(RollNumber)+ sizeof(TotalMarks) + sizeof(Name) ;</strong></span><br>
+So output will be 4 + 4 + 0 = 8 bytes.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h4><span style="font-family: helvetica, arial, sans-serif;">Sample program to calculate the size of the structure</span></h4>
+<p>In below example code I am calculating the <a href="https://aticleworld.com/size-of-structure-in-c/" target="_blank" rel="noopener noreferrer">size of the structure</a> which contains 0 length array member.</p><div class="aticl-amazon" id="aticl-1285468675"><script async="" src="./What is importance of struct hack in c_ - AticleWorld_files/f.txt"></script>
+<!-- DisplayAdd -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7777591694326612" data-ad-slot="7092040311" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<pre class="line-height:16 nums:false lang:c decode:true">#include &lt;stdio.h&gt;
+
+//Structure in c
+typedef struct
+{
+
+    int RollNumber; //Size of int 4 bytes
+
+    float Fees; //Size of float 4 bytes
+
+    int TotalMarks; //Size of int 4 bytes
+
+    char Name[0]; //Size of int 0 bytes
+
+} sStudentInfo;
+
+
+int main()
+{
+    printf("Size of structure = %d\n",sizeof(sStudentInfo));
+
+}
+</pre>
+<p><strong>Output: &nbsp;</strong><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;">Size of structure = 12</span></p>
+<p>&nbsp;</p>
+<h5><strong>If you want to learn more about the c language, here&nbsp;10 Free days (up to 200 minutes)&nbsp;<a href="https://pluralsight.pxf.io/c/1192901/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fc-programming-language-in-action" target="_blank" rel="noopener noreferrer">C video course</a>&nbsp;for you.</strong></h5>
+<p><strong><a class="button1" href="https://pluralsight.pxf.io/c/1192901/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fc-programming-language-in-action" target="_blank" rel="noopener noreferrer">Your free trial is waiting</a></strong></p>
+<p>&nbsp;</p>
+<h4>Why is struct hack required?</h4>
+<p>Let’s take an example to understand the above question. First I want to declare a structure which contains the information (price, name, expiry date ..etc) of medicine.</p>
+<pre class="show-title:false nums:false lang:c decode:true">typedef struct
+{
+    int Price;
+
+    int ExpiryYears;
+
+    char Name[MaxSize];
+
+} sMedicineInfo;
+</pre>
+<p>In the above structure, the name of the medicine should be dynamic. If the name of the medicine is less than MaxSize, it causes the memory loss but if the medicine name greater than the MaxSize, your code can crash. With the help of struct hack, we can resolve the above issue and create the dynamic char array to store the medicine name. See the below section ” How to use struct hack in C?”.</p>
+<h4><span style="font-family: helvetica, arial, sans-serif;">Why do not use a pointer?</span></h4>
+<p>Using the <a href="https://aticleworld.com/pointers-in-c/" target="_blank" rel="noopener noreferrer">pointer</a> we can also create the <a href="https://aticleworld.com/dynamically-allocate-2d-array-c/" target="_blank" rel="noopener noreferrer">dynamic length array</a> but problem is that in pointers take extra (4 or 8 bytes depending on the system) memory.&nbsp;When we have created a pointer to the structure then we have to explicitly <a href="https://aticleworld.com/dynamic-memory-allocation-in-c/" target="_blank" rel="noopener noreferrer">allocate the memory </a>for the pointers but if we used struct hack then there is no need to allocate memory again for the array.</p>
+<p><span style="font-size: 12pt; font-family: helvetica, arial, sans-serif;"><strong>Let’s see an example for better understanding.</strong></span></p>
+<p>Suppose there are two structure one contains ”&nbsp;char * ” and second contains the “0 length array”, both structure is used to store the name and number of characters within the name.</p><div class="aticl-content" id="aticl-1292968253"><script async="" src="./What is importance of struct hack in c_ - AticleWorld_files/f.txt"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7777591694326612" data-ad-slot="2359476209"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<pre class="show-title:false nums:false lang:c decode:true ">typedef struct
+{
+ int iLen;
+ 
+ char *pcName;
+ 
+}sNameInfo1;</pre>
+<pre class="show-title:false nums:false lang:c decode:true ">typedef struct
+{
+ int iLen;
+ 
+ char acName[0];
+ 
+}sNameInfo2;</pre>
+<ul>
+<li><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;">In sNameInfo1 the character data could be anywhere in memory and pointed by the pcName but in sNameInfo2 character, data is in inside the structure.</span></li>
+<li><span style="font-size: 12pt; font-family: helvetica, arial, sans-serif;">If we create a pointer to sNameInfo1 you need to take care of allocating and freeing of character pointer in addition of struct itself but with a pointer to sNameInfo2, we need allocating and freeing the struct itself because everything is packaged together.</span></li>
+</ul>
+<p><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;"><strong>example,</strong></span></p>
+<pre class="show-title:false nums:false lang:c decode:true">//Allocating memory when using sNameInfo1
+
+sNameInfo1 *psInfo1 = malloc(sizeof(sNameInfo1));
+
+psInfo1-&gt;pcName = malloc(sizeof(char) * Number of character + 1);
+
+
+
+//freeing the allocated memory
+
+free(psInfo1-&gt;pcName);
+
+free(psInfo1);
+
+
+
+//Allocating memory when using sNameInfo2
+
+sNameInfo1 *psInfo2 = malloc(sizeof(sNameInfo1)+(sizeof(char) * Number of character + 1));
+
+
+//freeing the allocated memory
+
+free(psInfo2);
+
+
+</pre>
+<p>&nbsp;</p>
+<h4>How to use struct hack in C?</h4>
+<p>In the below program, I have created a struct hack in place of the static array. You can see how struct hack provides you the facility to create a dynamic character array which behaves like a static array and easy to free the allocated memory as compare to the character pointer.</p>
+<pre class="lang:c decode:true ">#include&lt;string.h&gt;
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+
+// A structure to store employee information
+typedef struct EmpInformation
+{
+    int Emp_id;
+    int Salary;
+    char Address[0];
+} sEmpInformation;
+
+typedef sEmpInformation* psEmpInformation;
+
+
+
+// Allocate the memory and initialize the structure
+psEmpInformation ComposeEmpInfo( int salary,int id, const char *pcAddress)
+{
+    // Allocating memory as per the requirements
+    psEmpInformation psEmpInfo = malloc( sizeof(*psEmpInfo) + sizeof(char) * strlen(pcAddress) + 1);
+    if(psEmpInfo != NULL)
+    {
+        psEmpInfo-&gt;Emp_id = id;
+        psEmpInfo-&gt;Salary = salary;
+        strcpy(psEmpInfo-&gt;Address, pcAddress);
+    }
+    return psEmpInfo;
+}
+
+// Print student details
+void printEmpInfo(psEmpInformation psEmpInfo)
+{
+    printf("Emp_id : %d \
+            Salary : %d  \
+            Address: %s\n",
+           psEmpInfo-&gt;Emp_id,psEmpInfo-&gt;Salary,psEmpInfo-&gt;Address);
+
+}
+
+// Driver main Code
+int main()
+{
+    //variable to store information more than 30 bytes
+    psEmpInformation Amlendra = ComposeEmpInfo(1,100013, "Preet vihar street-abcd ,block abcxyz, New Delhi, India");
+
+    if(Amlendra != NULL)
+    {
+        printEmpInfo(Amlendra);
+        free(Amlendra);
+    }
+
+
+    //variable to store information less than 30 bytes
+    psEmpInformation Aticleworld = ComposeEmpInfo(13,200013, "New Delhi, India");
+
+    if(Aticleworld != NULL)
+    {
+        printEmpInfo(Aticleworld);
+        free(Aticleworld);
+    }
+
+    return 0;
+}
+</pre>
+<p>&nbsp;</p>
+<p><img data-attachment-id="1650" data-permalink="https://aticleworld.com/flexible-array-member/4-min-4/" data-orig-file="https://i0.wp.com/aticleworld.com/wp-content/uploads/2017/09/4-min.png?fit=630%2C228&amp;ssl=1" data-orig-size="630,228" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="" data-image-description="" data-medium-file="https://i0.wp.com/aticleworld.com/wp-content/uploads/2017/09/4-min.png?fit=300%2C109&amp;ssl=1" data-large-file="https://i0.wp.com/aticleworld.com/wp-content/uploads/2017/09/4-min.png?fit=630%2C228&amp;ssl=1" class="wp-image-1650 size-full aligncenter jetpack-lazy-image" src="./What is importance of struct hack in c_ - AticleWorld_files/4-min.png" alt="array flexible in c" width="630" height="228" data-recalc-dims="1" data-lazy-srcset="https://i0.wp.com/aticleworld.com/wp-content/uploads/2017/09/4-min.png?w=630&amp;ssl=1 630w, https://i0.wp.com/aticleworld.com/wp-content/uploads/2017/09/4-min.png?resize=300%2C109&amp;ssl=1 300w" data-lazy-sizes="(max-width: 630px) 100vw, 630px" data-lazy-src="https://i0.wp.com/aticleworld.com/wp-content/uploads/2017/09/4-min.png?resize=630%2C228&amp;is-pending-load=1#038;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-attachment-id="1650" data-permalink="https://aticleworld.com/flexible-array-member/4-min-4/" data-orig-file="https://i0.wp.com/aticleworld.com/wp-content/uploads/2017/09/4-min.png?fit=630%2C228&amp;ssl=1" data-orig-size="630,228" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="" data-image-description="" data-medium-file="https://i0.wp.com/aticleworld.com/wp-content/uploads/2017/09/4-min.png?fit=300%2C109&amp;ssl=1" data-large-file="https://i0.wp.com/aticleworld.com/wp-content/uploads/2017/09/4-min.png?fit=630%2C228&amp;ssl=1" class="wp-image-1650 size-full aligncenter" src="https://i0.wp.com/aticleworld.com/wp-content/uploads/2017/09/4-min.png?resize=630%2C228&#038;ssl=1" alt="array flexible in c" width="630" height="228" srcset="https://i0.wp.com/aticleworld.com/wp-content/uploads/2017/09/4-min.png?w=630&amp;ssl=1 630w, https://i0.wp.com/aticleworld.com/wp-content/uploads/2017/09/4-min.png?resize=300%2C109&amp;ssl=1 300w" sizes="(max-width: 630px) 100vw, 630px" data-recalc-dims="1" /></noscript></p>
+<p>&nbsp;</p>
+<h4><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;">Many places where struct hack makes sense, I am explaining some scenario where struct hack is very useful.</span></h4>
+<ul>
+<li><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;">Suppose you are working on a file where you need to store the user information. If you are using struct hack, you need to call write function only once to write all the data in the file because structure and character payload packaged together. It is not possible if you create character <a href="https://aticleworld.com/pointers-in-c/" target="_blank" rel="noopener noreferrer">pointer </a>in place of the 0 length array.</span></li>
+<li><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;">Suppose you want to send the data to the server (<a href="https://aticleworld.com/socket-programming-in-c-using-tcpip/" target="_blank" rel="noopener noreferrer">TCP/IP</a>), the server expects the received message in the form of the data and length. Using the struct hack you can send the whole data in the single call of send (Name of send function could be anything depending on the system) library function. In place of the array if you used pointer then you will need to calls send function twice, otherwise, you will send the address of the pointer in place of the actual data.</span></li>
+<li><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;">If you will use an array in place of the pointer, you can use <a href="https://aticleworld.com/how-to-use-memcpy-and-how-to-write-your-own-memcpy/" target="_blank" rel="noopener noreferrer">memcpy </a>to copy the data from the one object to another one without any culprit.</span></li>
+</ul>
+<p><script async="" src="./What is importance of struct hack in c_ - AticleWorld_files/f.txt"></script><br>
+<ins class="adsbygoogle" style="display: block;" data-ad-format="autorelaxed" data-ad-client="ca-pub-7777591694326612" data-ad-slot="9481265204"></ins><br>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+</div>
+</div><!-- .entry-content -->
+<footer class="entry-footer">
+<div class="entry-footer-inner">
+This entry was posted in <a href="https://aticleworld.com/category/c-language/" rel="category tag" itemprop="articleSection">C Language</a>. Bookmark the <a href="https://aticleworld.com/struct-hack-in-c/" rel="bookmark">permalink</a>.
+</div><!-- .entry-footer-inner -->
+</footer><!-- .entry-footer -->
+<div class="author-container">
+<div class="author-info" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+<h5 class="author-name main-font">
+<span>About</span> <a href="https://aticleworld.com/author/pritosh/" title="Posts by Amlendra" rel="author" itemprop="name">Amlendra</a>		</h5><!-- .author-name -->
+<div class="author-bio" itemprop="description">
+I am an embedded c software engineer and a corporate trainer, currently, I am working as senior software engineer in a largest Software consulting company . I have working experience of different microcontrollers (stm32, LPC, PIC AVR and 8051), drivers (USB and virtual com-port), POS device (VeriFone) and payment gateway (global and first data).		</div><!-- .author-bio -->
+<div class="author-social">
+<a href="https://aticleworld.com/" class="author-website" target="_blank">Website</a>		</div><!-- .author-social -->
+</div><!-- .author-info -->
+</div><!-- .author-container -->
+<div class="related-posts">
+<h5 class="subtitle main-font bold-font has-opacity">You might also like</h5>
+<div class="row">
+<div class="col-lg-6 col-md-6 clearfix related-item">
+<div class="related-thumb">
+<a href="https://aticleworld.com/pointer-arithmetic/" class="post-thumb alignleft">
+<img width="200" height="200" src="./What is importance of struct hack in c_ - AticleWorld_files/How-to-use-arithmetic-operator-with-pointers.jpg" class="attachment-thumb-image size-thumb-image wp-post-image jetpack-lazy-image" alt="How to use arithmetic operator with pointers" data-attachment-id="2047" data-permalink="https://aticleworld.com/pointer-arithmetic/how-to-use-arithmetic-operator-with-pointers/" data-orig-file="https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/07/How-to-use-arithmetic-operator-with-pointers.jpg?fit=800%2C400&amp;ssl=1" data-orig-size="800,400" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="" data-image-description="" data-medium-file="https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/07/How-to-use-arithmetic-operator-with-pointers.jpg?fit=800%2C400&amp;ssl=1" data-large-file="https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/07/How-to-use-arithmetic-operator-with-pointers.jpg?fit=800%2C400&amp;ssl=1" data-lazy-srcset="https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/07/How-to-use-arithmetic-operator-with-pointers.jpg?resize=200%2C200&amp;ssl=1 200w, https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/07/How-to-use-arithmetic-operator-with-pointers.jpg?zoom=2&amp;resize=200%2C200&amp;ssl=1 400w, https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/07/How-to-use-arithmetic-operator-with-pointers.jpg?zoom=3&amp;resize=200%2C200&amp;ssl=1 600w" data-lazy-sizes="(max-width: 200px) 100vw, 200px" data-lazy-src="https://i2.wp.com/aticleworld.com/wp-content/uploads/2017/07/How-to-use-arithmetic-operator-with-pointers.jpg?resize=200%2C200&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">					</a><!-- .thumb-link -->
+</div><!-- .related-thumb -->
+<div class="entry-category"><a href="https://aticleworld.com/category/c-language/" rel="category tag" itemprop="articleSection">C Language</a></div><!-- .entry-category -->
+<h4 class="related-title"><a href="https://aticleworld.com/pointer-arithmetic/" rel="bookmark">How to use arithmetic operator with pointers</a></h4>			</div><!-- .related-item -->
+<div class="col-lg-6 col-md-6 clearfix related-item">
+<div class="related-thumb">
+<a href="https://aticleworld.com/c-program-to-print-rhombus-star-pattern/" class="post-thumb alignleft">
+<img width="200" height="200" src="./What is importance of struct hack in c_ - AticleWorld_files/C-program-to-print-rhombus-star-pattern.jpg" class="attachment-thumb-image size-thumb-image wp-post-image jetpack-lazy-image" alt="C program to print rhombus star pattern" data-attachment-id="5134" data-permalink="https://aticleworld.com/c-program-to-print-rhombus-star-pattern/c-program-to-print-rhombus-star-pattern-2/" data-orig-file="https://i0.wp.com/aticleworld.com/wp-content/uploads/2019/09/C-program-to-print-rhombus-star-pattern.jpg?fit=820%2C312&amp;ssl=1" data-orig-size="820,312" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="" data-image-description="" data-medium-file="https://i0.wp.com/aticleworld.com/wp-content/uploads/2019/09/C-program-to-print-rhombus-star-pattern.jpg?fit=820%2C312&amp;ssl=1" data-large-file="https://i0.wp.com/aticleworld.com/wp-content/uploads/2019/09/C-program-to-print-rhombus-star-pattern.jpg?fit=820%2C312&amp;ssl=1" data-lazy-srcset="https://i0.wp.com/aticleworld.com/wp-content/uploads/2019/09/C-program-to-print-rhombus-star-pattern.jpg?resize=200%2C200&amp;ssl=1 200w, https://i0.wp.com/aticleworld.com/wp-content/uploads/2019/09/C-program-to-print-rhombus-star-pattern.jpg?zoom=2&amp;resize=200%2C200&amp;ssl=1 400w, https://i0.wp.com/aticleworld.com/wp-content/uploads/2019/09/C-program-to-print-rhombus-star-pattern.jpg?zoom=3&amp;resize=200%2C200&amp;ssl=1 600w" data-lazy-sizes="(max-width: 200px) 100vw, 200px" data-lazy-src="https://i0.wp.com/aticleworld.com/wp-content/uploads/2019/09/C-program-to-print-rhombus-star-pattern.jpg?resize=200%2C200&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">					</a><!-- .thumb-link -->
+</div><!-- .related-thumb -->
+<div class="entry-category"><a href="https://aticleworld.com/category/c-language/" rel="category tag" itemprop="articleSection">C Language</a></div><!-- .entry-category -->
+<h4 class="related-title"><a href="https://aticleworld.com/c-program-to-print-rhombus-star-pattern/" rel="bookmark">C program to print rhombus star pattern</a></h4>			</div><!-- .related-item -->
+</div><!-- .row -->
+<div class="row">
+<div class="col-lg-6 col-md-6 clearfix related-item">
+<div class="related-thumb">
+<a href="https://aticleworld.com/pointer-inside-a-structure/" class="post-thumb alignleft">
+<img width="200" height="200" src="./What is importance of struct hack in c_ - AticleWorld_files/How-to-access-pointer-inside-a-structure-in-c.png" class="attachment-thumb-image size-thumb-image wp-post-image jetpack-lazy-image" alt="pointer inside a structure" data-attachment-id="3137" data-permalink="https://aticleworld.com/pointer-inside-a-structure/how-to-access-pointer-inside-a-structure-in-c/" data-orig-file="https://i0.wp.com/aticleworld.com/wp-content/uploads/2018/05/How-to-access-pointer-inside-a-structure-in-c.png?fit=820%2C312&amp;ssl=1" data-orig-size="820,312" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="" data-image-description="" data-medium-file="https://i0.wp.com/aticleworld.com/wp-content/uploads/2018/05/How-to-access-pointer-inside-a-structure-in-c.png?fit=820%2C312&amp;ssl=1" data-large-file="https://i0.wp.com/aticleworld.com/wp-content/uploads/2018/05/How-to-access-pointer-inside-a-structure-in-c.png?fit=820%2C312&amp;ssl=1" data-lazy-srcset="https://i0.wp.com/aticleworld.com/wp-content/uploads/2018/05/How-to-access-pointer-inside-a-structure-in-c.png?resize=200%2C200&amp;ssl=1 200w, https://i0.wp.com/aticleworld.com/wp-content/uploads/2018/05/How-to-access-pointer-inside-a-structure-in-c.png?zoom=2&amp;resize=200%2C200&amp;ssl=1 400w, https://i0.wp.com/aticleworld.com/wp-content/uploads/2018/05/How-to-access-pointer-inside-a-structure-in-c.png?zoom=3&amp;resize=200%2C200&amp;ssl=1 600w" data-lazy-sizes="(max-width: 200px) 100vw, 200px" data-lazy-src="https://i0.wp.com/aticleworld.com/wp-content/uploads/2018/05/How-to-access-pointer-inside-a-structure-in-c.png?resize=200%2C200&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">					</a><!-- .thumb-link -->
+</div><!-- .related-thumb -->
+<div class="entry-category"><a href="https://aticleworld.com/category/c-language/" rel="category tag" itemprop="articleSection">C Language</a></div><!-- .entry-category -->
+<h4 class="related-title"><a href="https://aticleworld.com/pointer-inside-a-structure/" rel="bookmark">How to access pointer inside a structure in c</a></h4>			</div><!-- .related-item -->
+<div class="col-lg-6 col-md-6 clearfix related-item">
+<div class="related-thumb">
+<a href="https://aticleworld.com/how-to-use-memcpy-and-how-to-write-your-own-memcpy/" class="post-thumb alignleft">
+<img width="200" height="200" src="./What is importance of struct hack in c_ - AticleWorld_files/Implementation-of-memcpy-in-c-language.jpg" class="attachment-thumb-image size-thumb-image wp-post-image jetpack-lazy-image" alt="Implementation of memcpy in c language" data-attachment-id="2223" data-permalink="https://aticleworld.com/how-to-use-memcpy-and-how-to-write-your-own-memcpy/implementation-of-memcpy-in-c-language/" data-orig-file="https://i0.wp.com/aticleworld.com/wp-content/uploads/2016/03/Implementation-of-memcpy-in-c-language.jpg?fit=800%2C400&amp;ssl=1" data-orig-size="800,400" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="" data-image-description="" data-medium-file="https://i0.wp.com/aticleworld.com/wp-content/uploads/2016/03/Implementation-of-memcpy-in-c-language.jpg?fit=800%2C400&amp;ssl=1" data-large-file="https://i0.wp.com/aticleworld.com/wp-content/uploads/2016/03/Implementation-of-memcpy-in-c-language.jpg?fit=800%2C400&amp;ssl=1" data-lazy-srcset="https://i0.wp.com/aticleworld.com/wp-content/uploads/2016/03/Implementation-of-memcpy-in-c-language.jpg?resize=200%2C200&amp;ssl=1 200w, https://i0.wp.com/aticleworld.com/wp-content/uploads/2016/03/Implementation-of-memcpy-in-c-language.jpg?zoom=2&amp;resize=200%2C200&amp;ssl=1 400w, https://i0.wp.com/aticleworld.com/wp-content/uploads/2016/03/Implementation-of-memcpy-in-c-language.jpg?zoom=3&amp;resize=200%2C200&amp;ssl=1 600w" data-lazy-sizes="(max-width: 200px) 100vw, 200px" data-lazy-src="https://i0.wp.com/aticleworld.com/wp-content/uploads/2016/03/Implementation-of-memcpy-in-c-language.jpg?resize=200%2C200&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">					</a><!-- .thumb-link -->
+</div><!-- .related-thumb -->
+<div class="entry-category"><a href="https://aticleworld.com/category/c-language/" rel="category tag" itemprop="articleSection">C Language</a></div><!-- .entry-category -->
+<h4 class="related-title"><a href="https://aticleworld.com/how-to-use-memcpy-and-how-to-write-your-own-memcpy/" rel="bookmark">Implementation of memcpy in c language</a></h4>			</div><!-- .related-item -->
+</div><!-- .row -->
+</div><!-- .related-posts -->
+</article><!-- #post-## -->
+<nav class="navigation post-navigation" role="navigation">
+<h1 class="screen-reader-text">Post navigation</h1>
+<div class="nav-links clearfix">
+<div class="nav-next">
+<h4 class="nav-title main-font">
+<a href="https://aticleworld.com/signed-and-unsigned-integers/">
+Next Article					</a>
+</h4>
+<a href="https://aticleworld.com/signed-and-unsigned-integers/" class="post-thumb">
+<img width="800" height="400" src="./What is importance of struct hack in c_ - AticleWorld_files/signed-and-unsigned-integer-in-c.jpg" class="attachment-banner-image size-banner-image wp-post-image jetpack-lazy-image" alt="what is difference between signed and unsigned integers?" data-attachment-id="2020" data-permalink="https://aticleworld.com/signed-and-unsigned-integers/signed-and-unsigned-integer-in-c/" data-orig-file="https://i1.wp.com/aticleworld.com/wp-content/uploads/2017/09/signed-and-unsigned-integer-in-c.jpg?fit=800%2C400&amp;ssl=1" data-orig-size="800,400" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="" data-image-description="" data-medium-file="https://i1.wp.com/aticleworld.com/wp-content/uploads/2017/09/signed-and-unsigned-integer-in-c.jpg?fit=800%2C400&amp;ssl=1" data-large-file="https://i1.wp.com/aticleworld.com/wp-content/uploads/2017/09/signed-and-unsigned-integer-in-c.jpg?fit=800%2C400&amp;ssl=1" data-lazy-srcset="https://i1.wp.com/aticleworld.com/wp-content/uploads/2017/09/signed-and-unsigned-integer-in-c.jpg?w=800&amp;ssl=1 800w, https://i1.wp.com/aticleworld.com/wp-content/uploads/2017/09/signed-and-unsigned-integer-in-c.jpg?resize=768%2C384&amp;ssl=1 768w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://i1.wp.com/aticleworld.com/wp-content/uploads/2017/09/signed-and-unsigned-integer-in-c.jpg?resize=800%2C400&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">				</a><!-- .post-thumb -->
+<h3 class="post-title">
+<a href="https://aticleworld.com/signed-and-unsigned-integers/" rel="next">A closer look at signed and unsigned integers in C.</a>				</h3><!-- .post-title -->
+<div class="post-meta">
+<span class="byline"> <span class="author vcard" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><a class="url fn n" href="https://aticleworld.com/author/pritosh/" itemprop="name">Amlendra</a></span></span><span class="sep">/</span><span class="posted-on"><a href="https://aticleworld.com/struct-hack-in-c/" rel="bookmark"><time class="entry-date published" datetime="" itemprop="datePublished"></time><time class="updated" datetime="" itemprop="dateModified"></time></a></span>				</div><!-- .post-meta -->
+</div><!-- .nav-next -->
+<div class="nav-previous">
+<h4 class="nav-title main-font">
+<a href="https://aticleworld.com/flexible-array-member/">
+Previous Article					</a>
+</h4>
+<a href="https://aticleworld.com/flexible-array-member/" class="post-thumb">
+<img width="800" height="400" src="./What is importance of struct hack in c_ - AticleWorld_files/flexible-array-member-in-c.jpg" class="attachment-banner-image size-banner-image wp-post-image jetpack-lazy-image" alt="flexible array member in c" data-attachment-id="2026" data-permalink="https://aticleworld.com/flexible-array-member/flexible-array-member-in-c/" data-orig-file="https://i1.wp.com/aticleworld.com/wp-content/uploads/2017/09/flexible-array-member-in-c.jpg?fit=800%2C400&amp;ssl=1" data-orig-size="800,400" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="" data-image-description="" data-medium-file="https://i1.wp.com/aticleworld.com/wp-content/uploads/2017/09/flexible-array-member-in-c.jpg?fit=800%2C400&amp;ssl=1" data-large-file="https://i1.wp.com/aticleworld.com/wp-content/uploads/2017/09/flexible-array-member-in-c.jpg?fit=800%2C400&amp;ssl=1" data-lazy-srcset="https://i1.wp.com/aticleworld.com/wp-content/uploads/2017/09/flexible-array-member-in-c.jpg?w=800&amp;ssl=1 800w, https://i1.wp.com/aticleworld.com/wp-content/uploads/2017/09/flexible-array-member-in-c.jpg?resize=768%2C384&amp;ssl=1 768w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://i1.wp.com/aticleworld.com/wp-content/uploads/2017/09/flexible-array-member-in-c.jpg?resize=800%2C400&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">				</a><!-- .post-thumb -->
+<h3 class="post-title">
+<a href="https://aticleworld.com/flexible-array-member/" rel="prev">What is flexible array member in c?</a>				</h3><!-- .post-title -->
+<div class="post-meta">
+<span class="byline"> <span class="author vcard" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><a class="url fn n" href="https://aticleworld.com/author/pritosh/" itemprop="name">Amlendra</a></span></span><span class="sep">/</span><span class="posted-on"><a href="https://aticleworld.com/struct-hack-in-c/" rel="bookmark"><time class="entry-date published" datetime="" itemprop="datePublished"></time><time class="updated" datetime="" itemprop="dateModified"></time></a></span>				</div><!-- .post-meta -->
+</div><!-- .nav-previous -->
+</div><!-- .nav-links -->
+</nav><!-- .navigation -->
+<div id="comments" class="comments-area">
+<h2 class="comments-title">
+2 comments					</h2>
+<ol class="comment-list">
+<li id="comment-666" class="comment even thread-even depth-1 parent">
+<article id="div-comment-666" class="comment-body">
+<footer class="comment-meta">
+<div class="comment-author vcard">
+<b class="fn">Akshay Immanuel</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+<div class="comment-metadata">
+<a href="https://aticleworld.com/struct-hack-in-c/#comment-666">
+<time datetime="2017-10-04T09:49:35+05:30">
+October 4, 2017 at 9:49 am							</time>
+</a>
+</div><!-- .comment-metadata -->
+</footer><!-- .comment-meta -->
+<div class="comment-content">
+<p>Hi,<br>
+Im not clear what you meant by “some compiler does not support 0 length array, in that scenario we have to take the length of the array 1”. If you keep the size of the array as 1. Then what flexibility do you have? Also, do you mean that if you set the size of the array as 0, it is equal to array[](array[0] is like array[])?</p>
+</div><!-- .comment-content -->
+<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://aticleworld.com/struct-hack-in-c/#comment-666" data-commentid="666" data-postid="1657" data-belowelement="div-comment-666" data-respondelement="respond" aria-label="Reply to Akshay Immanuel">Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+<li id="comment-668" class="comment byuser comment-author-pritosh bypostauthor odd alt depth-2">
+<article id="div-comment-668" class="comment-body">
+<footer class="comment-meta">
+<div class="comment-author vcard">
+<b class="fn">Amlendra</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+<div class="comment-metadata">
+<a href="https://aticleworld.com/struct-hack-in-c/#comment-668">
+<time datetime="2017-10-04T10:42:22+05:30">
+October 4, 2017 at 10:42 am							</time>
+</a>
+</div><!-- .comment-metadata -->
+</footer><!-- .comment-meta -->
+<div class="comment-content">
+<p>Previously compiler did not support 0 size array, so people use the array with size 1. See below images.<br>
+When compiling a code on an old compiler that contains 0 size array.<br>
+<img src="./What is importance of struct hack in c_ - AticleWorld_files/struct-hack-use-min.jpg" alt="struct hack" width="584" height="344" scale="1.25"><br>
+C99 introduce empty array(flexible array) that is similar to the 0 size array.<br>
+See this link: <a href="https://aticleworld.com/flexible-array-member/" rel="nofollow">https://aticleworld.com/flexible-array-member/</a></p>
+</div><!-- .comment-content -->
+<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://aticleworld.com/struct-hack-in-c/#comment-668" data-commentid="668" data-postid="1657" data-belowelement="div-comment-668" data-respondelement="respond" aria-label="Reply to Amlendra">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .comment-list -->
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">Leave a Reply					<small><a rel="nofollow" id="cancel-comment-reply-link" href="https://aticleworld.com/struct-hack-in-c/#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form id="commentform" class="comment-form">
+<iframe title="Comment Form" src="./What is importance of struct hack in c_ - AticleWorld_files/saved_resource(3).html" style="width: 100%; height: 58px; border: 0px;" name="jetpack_remote_comment" class="jetpack_remote_comment" id="jetpack_remote_comment" sandbox="allow-same-origin allow-top-navigation allow-scripts allow-forms allow-popups" scrolling="no"></iframe>
+<!--[if !IE]><!-->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+var commentForms = document.getElementsByClassName('jetpack_remote_comment');
+for (var i = 0; i < commentForms.length; i++) {
+commentForms[i].allowTransparency = false;
+commentForms[i].scrolling = 'no';
+}
+});
+</script>
+<!--<![endif]-->
+<input id="ak_js" name="ak_js" type="hidden" value="1573237911514"></form>
+</div>
+<input type="hidden" name="comment_parent" id="comment_parent" value="">
+</div><!-- #comments -->
+</main><!-- #main -->
+</div><!-- #primary -->
+<div class="col-lg-4 col-md-4">
+<div id="secondary" class="widget-area q2w3-fixed-widget-container" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar" style="height: 1041px;">
+<aside id="custom_html-3" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><a target="_blank" href="https://www.udemy.com/?ranMID=39197&amp;ranEAID=UajS5soDmWY&amp;ranSiteID=UajS5soDmWY-ZAN8mpepGLirkhLP5qf9Nw&amp;LSNPUBID=UajS5soDmWY" rel="noopener noreferrer"><img src="./What is importance of struct hack in c_ - AticleWorld_files/udemycourse.jpg" border="0" data-recalc-dims="1" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1" width="315" height="240" src-orig="https://i0.wp.com/aticleworld.com/wp-content/uploads/2019/06/udemycourse.jpg?w=730&amp;ssl=1" scale="1.25"><noscript><img src="https://i0.wp.com/aticleworld.com/wp-content/uploads/2019/06/udemycourse.jpg?w=730&#038;ssl=1" border="0" data-recalc-dims="1" /></noscript></a></div></aside><aside id="categories-9" class="widget widget_categories"><h4 class="widget-title">Categories</h4>		<ul>
+<li class="cat-item cat-item-4"><a href="https://aticleworld.com/category/8051-micro-controller/">8051 Micro-controller</a>
+</li>
+<li class="cat-item cat-item-15"><a href="https://aticleworld.com/category/batch-file/">batch file</a>
+</li>
+<li class="cat-item cat-item-6"><a href="https://aticleworld.com/category/c-language/">C Language</a>
+</li>
+<li class="cat-item cat-item-5"><a href="https://aticleworld.com/category/c/">C++ Language</a>
+</li>
+<li class="cat-item cat-item-9"><a href="https://aticleworld.com/category/communication-protocol/">communication protocol</a>
+</li>
+<li class="cat-item cat-item-17"><a href="https://aticleworld.com/category/c-language/file-handling/">File handling</a>
+</li>
+<li class="cat-item cat-item-10"><a href="https://aticleworld.com/category/operating-system/">Operating System</a>
+</li>
+<li class="cat-item cat-item-19"><a href="https://aticleworld.com/category/c-language/star-patterns-in-c/">Star patterns in C</a>
+</li>
+<li class="cat-item cat-item-1"><a href="https://aticleworld.com/category/uncategorized/">Uncategorized</a>
+</li>
+<li class="cat-item cat-item-16"><a href="https://aticleworld.com/category/windows-driver/">Windows Driver</a>
+</li>
+</ul>
+</aside><aside id="custom_html-5" class="widget_text widget widget_custom_html" style=""><div class="textwidget custom-html-widget"><a target="_blank" href="https://pluralsight.pxf.io/c/1192901/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fc-programming-language-in-action" rel="noopener noreferrer"><img src="./What is importance of struct hack in c_ - AticleWorld_files/SideClanguge.jpg" border="0" data-recalc-dims="1" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1" width="300" height="495" src-orig="https://i0.wp.com/aticleworld.com/wp-content/uploads/2019/06/SideClanguge.jpg?w=730&amp;ssl=1" scale="1.25"><noscript><img src="https://i0.wp.com/aticleworld.com/wp-content/uploads/2019/06/SideClanguge.jpg?w=730&#038;ssl=1" border="0" data-recalc-dims="1" /></noscript></a></div></aside></div><!-- #secondary -->
+</div><!-- .col -->
+</div><!-- .row -->
+
+</div><!-- #content -->
+<footer id="colophon" class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+<div class="container">
+<div class="footer-widgets">
+<div class="row">
+<div class="col-lg-6 col-md-6 wide-widget">
+<aside id="custom_html-4" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/m1p6x5.js.download"></script>
+
+<style>
+	
+	
+						@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext');
+														
+
+	#mlb2-6816432,
+	#mlb2-6816432 *,
+	#mlb2-6816432 a:hover,
+	#mlb2-6816432 a:visited,
+	#mlb2-6816432 a:focus,
+	#mlb2-6816432 a:active {
+	    overflow:visible;
+	    position:static;
+	    background:none;
+	    border:none;
+	    bottom:auto;
+	    clear:none;
+	    cursor:default;
+	    float:none;
+	    letter-spacing:normal;
+	    line-height:normal;
+	    text-align:left;
+	    text-indent:0;
+	    text-transform:none;
+	    visibility:visible;
+	    white-space:normal;
+	
+	    max-height:none;
+	    max-width:none;
+	    left:auto;
+	    min-height:0;
+	    min-width:0;
+	    right:auto;
+	    top:auto;
+	    width:auto;
+	    z-index:auto;
+	
+	    text-shadow: none;
+	    box-shadow: none;
+	    outline: medium none;
+	}
+	
+	#mlb2-6816432 a:hover {
+		cursor: pointer !important;
+	}
+	
+	#mlb2-6816432 h4 {
+	    font-weight: normal;
+	}
+
+	#mlb2-6816432 .subscribe-form {
+	
+		padding: 20px;
+				border: 2px solid #F6F6F6 !important;
+		background: #2C3E50 none !important;
+		border-radius: 0px !important;
+		box-sizing: border-box !important;
+	
+	
+	}
+	
+	#mlb2-6816432 .ml-block-form {
+	 
+		margin-bottom: 0px;
+	
+	}
+    
+    #mlb2-6816432 .subscribe-form .form-section {
+    
+        margin-bottom: 20px;
+        width: 100%;
+    
+    }
+    
+    #mlb2-6816432 .subscribe-form .form-section.mb10 {
+    
+        margin-bottom: 10px;
+        float: left;
+    
+    }
+    
+    #mlb2-6816432 .subscribe-form .form-section.mb0 {
+    
+        margin-bottom: 0px;
+    
+    }
+
+    #mlb2-6816432 .subscribe-form .form-section h4 {
+    
+        margin: 0px 0px 10px 0px !important;
+        padding: 0px !important;
+        color: #FFFFFF !important;
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 28px !important;
+        line-height: 100%;
+        text-align: left !important;
+    
+    }
+
+    #mlb2-6816432 .subscribe-form .form-section p,
+    #mlb2-6816432 .subscribe-form .form-section li {
+    
+        line-height: 150%;
+        padding: 0px !important;
+        margin: 0px 0px 10px 0px;
+        color: #FFFFFF !important;
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 14px !important;
+    
+    }
+
+    #mlb2-6816432 .subscribe-form .form-section a {
+    
+        font-size: 14px;
+    
+    }
+
+    #mlb2-6816432 .subscribe-form .form-section .confirmation_checkbox {
+    
+        line-height: 150%;
+        padding: 0px !important;
+        margin: 0px 0px 15px 0px !important;
+        color: #000000 !important;
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 12px !important;
+        font-weight: normal !important;
+    
+    }
+
+    #mlb2-6816432 .subscribe-form .form-section .confirmation_checkbox input[type="checkbox"] {
+    
+        display: inline-block;
+        margin-right: 5px !important;
+        opacity: 1;
+        -webkit-appearance: checkbox;
+        -moz-appearance: checkbox;
+        appearance: checkbox;
+    
+    }
+
+    #mlb2-6816432 .subscribe-form .form-section .form-group {
+    
+        margin-bottom: 15px;
+    
+    }
+
+    #mlb2-6816432 .subscribe-form .form-section .form-group label {
+    
+        float: left;
+        margin-bottom: 10px;
+        width: 100%;
+        line-height: 100%;
+        color: #FFFFFF !important;
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 14px !important;
+    
+    }
+
+    #mlb2-6816432 .subscribe-form .form-section .checkbox {
+        
+
+        width: 100%;
+        margin: 0px 0px 10px 0px;
+        
+
+    }
+
+    #mlb2-6816432 .subscribe-form .form-section .checkbox label {
+
+    
+
+        color: #FFFFFF !important;
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 14px !important;
+    
+
+    }
+
+    #mlb2-6816432 .subscribe-form .form-section .checkbox input {
+
+    
+        margin: 0px 5px 0px 0px;
+    
+
+    }
+    
+     #mlb2-6816432 .subscribe-form .form-section .checkbox input[type="checkbox"] {
+
+    
+      display: inline-block;
+      opacity: 1;
+      -webkit-appearance: checkbox;
+      -moz-appearance: checkbox;
+      appearance: checkbox;
+    
+
+    }
+
+
+    #mlb2-6816432.ml-subscribe-form .form-group .form-control {
+
+    
+
+        width: 100%;
+        font-size: 13px;
+        padding: 10px 10px;
+        height: auto;
+        font-family: Arial;
+        border-radius: 0px;
+        border: 1px solid #cccccc !important;
+        color: #000000 !important;
+        background-color: #FFFFFF !important;
+    	-webkit-box-sizing: border-box;
+    	-moz-box-sizing: border-box;
+    	box-sizing: border-box;
+        clear: left;
+
+    
+
+    }
+
+    #mlb2-6816432.ml-subscribe-form button {
+
+    
+
+        border: none !important;
+        cursor: pointer !important;
+        width: 100% !important;
+        border-radius: 5px !important;
+        height: 40px !important;
+        background-color: #E67E22 !important;
+        color: #000000 !important;
+        font-family: 'Arial', sans-serif !important;
+        font-size: 16px !important;
+        text-align: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        position: relative!important;
+
+    
+
+    }
+
+    #mlb2-6816432.ml-subscribe-form button.gradient-on {
+
+    
+
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
+            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
+            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
+            background: linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
+
+    
+
+    }
+
+    #mlb2-6816432.ml-subscribe-form button.gradient-on:hover {
+
+    
+
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+            background: linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+
+    
+
+    }
+
+    #mlb2-6816432.ml-subscribe-form button[disabled] {
+
+    
+
+            cursor: not-allowed!important;
+
+    
+
+    }
+
+    #mlb2-6816432.ml-subscribe-form .form-section.ml-error label {
+
+    
+
+        color: red!important;
+
+    
+
+    }
+
+    #mlb2-6816432.ml-subscribe-form .form-group.ml-error label {
+
+    
+
+        color: red!important;
+
+    
+
+    }
+
+    #mlb2-6816432.ml-subscribe-form .form-group.ml-error .form-control  {
+
+    
+
+        border-color: red!important;
+
+    
+
+    }
+    
+
+    
+        
+    
+    
+            
+    @media (max-width: 768px) {
+	    
+	    #mlb2-6816432 {
+		    
+		    width: 100% !important;
+		    
+	    }
+	    
+	    #mlb2-6816432 form.ml-block-form,
+	    #mlb2-6816432.ml-subscribe-form .subscribe-form {
+			
+			width: 100% !important;
+			
+		}
+		
+	}
+	
+	    
+   
+    	
+	#mlb2-6816432 .subscribe-form.horizontal { padding-bottom: 0px; }
+	
+	#mlb2-6816432 .subscribe-form .form-section.horizontal {
+		float: left;
+		margin-bottom: 5px;
+		width: 70%;
+	}
+	
+	#mlb2-6816432 .subscribe-form .form-section.horizontal .form-group {
+		float: left;
+		width: 100%;
+		padding-right: 10px;
+	    box-sizing: border-box;
+	}
+	
+	#mlb2-6816432 .subscribe-form .form-section.horizontal .form-group .form-control {
+		height: 40px;
+	}
+	
+	#mlb2-6816432 .subscribe-form .ml-form-visible-xs {
+		display: none;
+	}
+	
+	#mlb2-6816432 .subscribe-form .form-section.horizontal.ml-button-position { width: 30%; padding: 0; }
+	#mlb2-6816432 .subscribe-form .form-section.horizontal.ml-button-position.top-padding { padding-top: 24px; }
+	
+		
+		@media (max-width: 768px) {
+		#mlb2-6816432.ml-subscribe-form .subscribe-form .form-section.horizontal {
+			float: none;
+		}
+		#mlb2-6816432.ml-subscribe-form .subscribe-form .form-section.horizontal,
+		#mlb2-6816432.ml-subscribe-form .subscribe-form .form-section.horizontal.ml-button-position,
+		#mlb2-6816432.ml-subscribe-form .subscribe-form .form-section.horizontal .form-group {
+			width: 100%;
+			padding: 0;
+		}
+		#mlb2-6816432 .subscribe-form .form-section.horizontal.ml-button-position {
+			margin-bottom: 20px;
+		}
+		
+		#mlb2-6816432 .subscribe-form .ml-form-visible-xs {
+  		display: block;
+		}
+		#mlb2-6816432 .subscribe-form .ml-form-hidden-xs {
+  		display: none;
+		}
+	}
+		
+</style>
+
+
+
+<div id="mlb2-6816432" class="ml-subscribe-form ml-subscribe-form-6816432">
+  <div class="ml-vertical-align-center">
+    <div class="subscribe-form ml-block-success" style="display:none">
+        <div class="form-section">
+            <h4>Join Aticleworld</h4>
+            <p>Thank you! Check your inbox for free eBook</p>
+    </div>
+  </div>
+  <form class="ml-block-form" action="https://landing.mailerlite.com/webforms/submit/m1p6x5" data-id="645766" data-code="m1p6x5" method="POST" target="_blank">
+    <div class="subscribe-form horizontal">
+        <div class="form-section mb10">
+            <h4>Join Aticleworld</h4>
+                  <p style="text-align: left;">You will also get our free C interview questions eBook</p>
+          </div>
+        <div class="form-section horizontal">
+            <div class="form-group ml-field-email ml-validate-required ml-validate-email">
+                <input type="email" name="fields[email]" class="form-control" placeholder="Enter your email here*" value="" autocomplete="email" x-autocompletetype="email" spellcheck="false" autocapitalize="off" autocorrect="off">
+      </div>
+          </div>
+    
+        <div class="form-section horizontal ml-button-position">
+      <button type="submit" class="primary">
+      Subscribe
+      </button>
+      <button disabled="disabled" style="display: none;" type="button" class="loading">
+      <img src="./What is importance of struct hack in c_ - AticleWorld_files/rolling@2x.gif" width="20" height="20" style="width: 20px; height: 20px;" scale="1.25">
+      </button>
+    </div>
+    <div class="clearfix" style="clear: both;"></div>
+        
+                            <input type="hidden" name="ml-submit" value="1">
+      </div>
+  </form>
+  <script>
+    function ml_webform_success_6816432 () {
+               var $ = ml_jQuery || jQuery;
+    
+        $('.ml-subscribe-form-6816432 .ml-block-success').show();
+        $('.ml-subscribe-form-6816432 .ml-block-form').hide();
+        };
+  </script>
+</div>
+</div>
+
+
+    </div></aside>					</div><!-- .footer-widget-area -->
+<div class="col-lg-2 col-md-2 small-widget">
+</div><!-- .footer-widget-area -->
+<div class="col-lg-2 col-md-2 small-widget">
+<aside id="text-6" class="widget widget_text"><h4 class="widget-title">Pages</h4>			<div class="textwidget"><p><a id="fixed_widget"></a><a href="https://aticleworld.com/about/">About</a><br>
+<a href="https://aticleworld.com/guest-article/">Guest Article</a><br>
+<a href="https://aticleworld.com/blog-post/">Blog Posts</a><br>
+<a href="https://aticleworld.com/affiliate-disclosure/">affiliate-disclosure</a><br>
+<a href="https://aticleworld.com/disclaimer/">disclaimer</a></p>
+</div>
+</aside>					</div><!-- .footer-widget-area -->
+<div class="col-lg-2 col-md-2 small-widget">
+<aside id="categories-10" class="widget widget_categories"><h4 class="widget-title">Categories</h4>		<ul>
+<li class="cat-item cat-item-4"><a href="https://aticleworld.com/category/8051-micro-controller/">8051 Micro-controller</a>
+</li>
+<li class="cat-item cat-item-15"><a href="https://aticleworld.com/category/batch-file/">batch file</a>
+</li>
+<li class="cat-item cat-item-6"><a href="https://aticleworld.com/category/c-language/">C Language</a>
+</li>
+<li class="cat-item cat-item-5"><a href="https://aticleworld.com/category/c/">C++ Language</a>
+</li>
+<li class="cat-item cat-item-9"><a href="https://aticleworld.com/category/communication-protocol/">communication protocol</a>
+</li>
+<li class="cat-item cat-item-17"><a href="https://aticleworld.com/category/c-language/file-handling/">File handling</a>
+</li>
+<li class="cat-item cat-item-10"><a href="https://aticleworld.com/category/operating-system/">Operating System</a>
+</li>
+<li class="cat-item cat-item-19"><a href="https://aticleworld.com/category/c-language/star-patterns-in-c/">Star patterns in C</a>
+</li>
+<li class="cat-item cat-item-1"><a href="https://aticleworld.com/category/uncategorized/">Uncategorized</a>
+</li>
+<li class="cat-item cat-item-16"><a href="https://aticleworld.com/category/windows-driver/">Windows Driver</a>
+</li>
+</ul>
+</aside>					</div><!-- .footer-widget-area -->
+</div><!-- .row -->
+</div><!-- .footer-widgets -->
+<div class="site-info clearfix">
+<div class="pull-left">
+<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+<span class="sep"> | </span>
+Theme: The Breaking News by <a href="https://themesharbor.com/" rel="designer">Themes Harbor</a>.					
+</div><!-- .pull-left -->
+<div class="pull-right">
+<a id="gotop" href="https://aticleworld.com/struct-hack-in-c/#">Back to top</a>
+</div><!-- .pull-right -->
+</div><!-- .site-info -->
+</div><!-- .container -->
+</footer><!-- #colophon -->
+</div><!-- #page -->
+<script type="text/javascript">
+jQuery("#post-1657 .entry-meta .date").css("display","none");
+jQuery("#post-1657 .entry-date").css("display","none");
+jQuery("#post-1657 .posted-on").css("display","none");
+jQuery("#post-1453 .entry-meta .date").css("display","none");
+jQuery("#post-1453 .entry-date").css("display","none");
+jQuery("#post-1453 .posted-on").css("display","none");
+jQuery("#post-5117 .entry-meta .date").css("display","none");
+jQuery("#post-5117 .entry-date").css("display","none");
+jQuery("#post-5117 .posted-on").css("display","none");
+jQuery("#post-3123 .entry-meta .date").css("display","none");
+jQuery("#post-3123 .entry-date").css("display","none");
+jQuery("#post-3123 .posted-on").css("display","none");
+jQuery("#post-296 .entry-meta .date").css("display","none");
+jQuery("#post-296 .entry-date").css("display","none");
+jQuery("#post-296 .posted-on").css("display","none");
+</script>
+<div style="display:none">
+</div>
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/photon.min.js.download"></script>
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/devicepx-jetpack.js.download"></script>
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/skip-link-focus-fix.js.download"></script>
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/comment-reply.min.js.download"></script>
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/jquery.assets.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var thebreakingnewsParams = {"infinitescrollImg":"\/\/i0.wp.com\/aticleworld.com\/wp-content\/themes\/thebreakingnews\/images\/ajax-loader.gif","infinitescrollLoadMsg":"Loading the next set of posts","infinitescrollFinishedMsg":"All posts loaded.","stickyMenu":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/thebreakingnews.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var q2w3_sidebar_options = [{"sidebar":"sidebar-1","margin_top":60,"margin_bottom":40,"stop_id":"fixed_widget","screen_max_width":0,"screen_max_height":0,"width_inherit":false,"refresh_interval":1500,"window_load_hook":false,"disable_mo_api":false,"widgets":["custom_html-5"]}];
+/* ]]> */
+</script>
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/q2w3-fixed-widget.min.js.download"></script>
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/lazy-images.min.js.download"></script>
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/mootools-core-yc.js.download"></script>
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/EnlighterJS.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/aticleworld.com\/wp-admin\/admin-ajax.php","nonce":"3d70e2651d","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/aticleworld.com\/wp-login.php?redirect_to=https%3A%2F%2Faticleworld.com%2Fstruct-hack-in-c%2F","blog_id":"1","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/jetpack-carousel.min.js.download"></script>
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/wp-embed.min.js.download"></script>
+<script async="async" type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/form.js.download"></script>
+<script type="text/javascript">/* <![CDATA[ */EnlighterJS_Config = {"selector":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"language":"c","theme":"droide","indent":2,"hover":"hoverEnabled","showLinenumbers":false,"rawButton":false,"infoButton":false,"windowButton":false,"rawcodeDoubleclick":false,"grouping":true,"cryptex":{"enabled":false,"email":"mail@example.tld"}};!function(){var a=function(a){var b="Enlighter Error: ";console.error?console.error(b+a):console.log&&console.log(b+a)};return window.addEvent?"undefined"==typeof EnlighterJS?void a("Javascript Resources not loaded yet!"):"undefined"==typeof EnlighterJS_Config?void a("Configuration not loaded yet!"):void window.addEvent("domready",function(){EnlighterJS.Util.Init(EnlighterJS_Config.selector.block,EnlighterJS_Config.selector.inline,EnlighterJS_Config)}):void a("MooTools Framework not loaded yet!")}();;/* ]]> */</script>
+<!--[if IE]>
+<script type="text/javascript">
+if ( 0 === window.location.hash.indexOf( '#comment-' ) ) {
+// window.location.reload() doesn't respect the Hash in IE
+window.location.hash = window.location.hash;
+}
+</script>
+<![endif]-->
+<script type="text/javascript">
+(function () {
+var comm_par_el = document.getElementById( 'comment_parent' ),
+comm_par = ( comm_par_el && comm_par_el.value ) ? comm_par_el.value : '',
+frame = document.getElementById( 'jetpack_remote_comment' ),
+tellFrameNewParent;
+tellFrameNewParent = function () {
+if ( comm_par ) {
+frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=116565851&postid=1657&comment_registration=0&require_name_email=1&stc_enabled=0&stb_enabled=0&show_avatars=0&avatar_default=monsterid&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en_GB&jetpack_version=7.9&show_cookie_consent=10&has_cookie_consent=0&token_key=%3Bnormal%3B&sig=a75b04b685b097f044e8fb1db558e0ce8cab8b4d#parent=https%3A%2F%2Faticleworld.com%2Fstruct-hack-in-c%2F" + '&replytocom=' + parseInt( comm_par, 10 ).toString();
+} else {
+frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=116565851&postid=1657&comment_registration=0&require_name_email=1&stc_enabled=0&stb_enabled=0&show_avatars=0&avatar_default=monsterid&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en_GB&jetpack_version=7.9&show_cookie_consent=10&has_cookie_consent=0&token_key=%3Bnormal%3B&sig=a75b04b685b097f044e8fb1db558e0ce8cab8b4d#parent=https%3A%2F%2Faticleworld.com%2Fstruct-hack-in-c%2F";
+}
+};
+if ( 'undefined' !== typeof addComment ) {
+addComment._Jetpack_moveForm = addComment.moveForm;
+addComment.moveForm = function ( commId, parentId, respondId, postId ) {
+var returnValue = addComment._Jetpack_moveForm( commId, parentId, respondId, postId ),
+cancelClick, cancel;
+if ( false === returnValue ) {
+cancel = document.getElementById( 'cancel-comment-reply-link' );
+cancelClick = cancel.onclick;
+cancel.onclick = function () {
+var cancelReturn = cancelClick.call( this );
+if ( false !== cancelReturn ) {
+return cancelReturn;
+}
+if ( ! comm_par ) {
+return cancelReturn;
+}
+comm_par = 0;
+tellFrameNewParent();
+return cancelReturn;
+};
+}
+if ( comm_par == parentId ) {
+return returnValue;
+}
+comm_par = parentId;
+tellFrameNewParent();
+return returnValue;
+};
+}
+// Do the post message bit after the dom has loaded.
+document.addEventListener( 'DOMContentLoaded', function () {
+var iframe_url = "https:\/\/jetpack.wordpress.com";
+if ( window.postMessage ) {
+if ( document.addEventListener ) {
+window.addEventListener( 'message', function ( event ) {
+var origin = event.origin.replace( /^http:\/\//i, 'https://' );
+if ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {
+return;
+}
+jQuery( frame ).height( event.data );
+});
+} else if ( document.attachEvent ) {
+window.attachEvent( 'message', function ( event ) {
+var origin = event.origin.replace( /^http:\/\//i, 'https://' );
+if ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {
+return;
+}
+jQuery( frame ).height( event.data );
+});
+}
+}
+})
+})();
+</script>
+<script type="text/javascript" src="./What is importance of struct hack in c_ - AticleWorld_files/e-201945.js.download" async="async" defer="defer"></script>
+<script type="text/javascript">
+_stq = window._stq || [];
+_stq.push([ 'view', {v:'ext',j:'1:7.9',blog:'116565851',post:'1657',tz:'5.5',srv:'aticleworld.com'} ]);
+_stq.push([ 'clickTrackerInit', '116565851', '1657' ]);
+</script>
+
+<img src="./What is importance of struct hack in c_ - AticleWorld_files/g.gif" alt=":)" width="6" height="5" id="wpstats" scale="0"></body></html>
