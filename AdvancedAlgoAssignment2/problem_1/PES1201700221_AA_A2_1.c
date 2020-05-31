@@ -44,7 +44,7 @@ void init_assembly_line(int n, int m, int assmbl_line[][m+2]){
 }
 
 // Finds minimum of two given integers along with setting the
-// flag which denotes, which number is smaller
+// flag which is used in filling the minimum path table.
 int min_2(int a, int b, int *flag){
 	if(a <= b){
 		*flag = 0;
@@ -55,7 +55,7 @@ int min_2(int a, int b, int *flag){
 }
 
 // Finds minimum of three given integers along with setting the
-// flag which denotes, which number is smaller
+// flag which is used in filling the minimum path table.
 int min_3(int a, int b, int c, int *flag){
 	int temp = a;
 	*flag = -1;
