@@ -18,4 +18,4 @@ Write a program that solves the assembly line problem with arbitrary number of a
 2 3 1 3 4  
 2 1 2 2 1  
 Represents the following assembly line  
-![alt text](../assets/example_1.jpg "Title")
+![alt text](./assets/example_1.jpg "Title")
