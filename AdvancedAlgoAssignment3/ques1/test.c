@@ -148,11 +148,10 @@ void extendSuffixTree(int pos)
 
 		// There is no outgoing edge starting with 
 		// activeEdge from activeNode 
-		if (activeNode->children] == NULL) 
+		if (activeNode->children[activeEdge] == NULL) 
 		{ 
 			//Extension Rule 2 (A new leaf edge gets created) 
-			activeNode->children] = 
-										newNode(pos, &leafEnd); 
+			activeNode->children[activeEdge] = newNode(pos, &leafEnd); 
 
 			/*A new leaf edge is created in above line starting 
 			from an existing node (the current activeNode), and 
@@ -173,7 +172,7 @@ void extendSuffixTree(int pos)
 		{ 
 			// Get the next node at the end of edge starting 
 			// with activeEdge 
-			Node *next = activeNode->children]; 
+			Node *next = activeNode->children[activeEdge]; 
 			if (walkDown(next))//Do walkdown 
 			{ 
 				//Start from next node (the new activeNode) 
@@ -211,12 +210,12 @@ void extendSuffixTree(int pos)
 
 			//New internal node 
 			Node *split = newNode(next->start, splitEnd); 
-			activeNode->children] = split; 
+			activeNode->children[activeEdge] = split; 
 
 			//New leaf coming out of new internal node 
-			split->children = newNode(pos, &leafEnd); 
+			split->children[activeEdge] = newNode(pos, &leafEnd); 
 			next->start += activeLength; 
-			split->children = next; 
+			split->children[activeEdge] = next; 
 
 			/*We got a new internal node here. If there is any 
 			internal node created in last extensions of same 
@@ -273,7 +272,7 @@ void setSuffixIndexByDFS(Node *n, int labelHeight)
 	{ 
 		//Print the label on edge from parent to current node 
 		//Uncomment below line to print suffix tree 
-	// print(n->start, *(n->end)); 
+		// print(n->start, *(n->end)); 
 	} 
 	int leaf = 1; 
 	int i; 
@@ -281,15 +280,14 @@ void setSuffixIndexByDFS(Node *n, int labelHeight)
 	{ 
 		if (n->children[i] != NULL) 
 		{ 
-			//Uncomment below two lines to print suffix index 
-		// if (leaf == 1 && n->start != -1) 
+			// Uncomment below two lines to print suffix index 
+			// if (leaf == 1 && n->start != -1) 
 			// printf(" [%d]\n", n->suffixIndex); 
 
 			//Current node is not a leaf as it has outgoing 
 			//edges from it. 
 			leaf = 0; 
-			setSuffixIndexByDFS(n->children[i], labelHeight + 
-								edgeLength(n->children[i])); 
+			setSuffixIndexByDFS(n->children[i], labelHeight + edgeLength(n->children[i])); 
 		} 
 	} 
 	if (leaf == 1) 

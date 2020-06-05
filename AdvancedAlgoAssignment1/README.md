@@ -1,8 +1,8 @@
-Instructions:
+# Instructions:
 
 1. The two tasks are:
-	Implementing a dictionary using splay trees
-	Implementing a dynamic table(With and without structure hacking)
+   - Implementing a dictionary using splay trees
+   - Implementing a dynamic table(With and without structure hacking)
 
 2. The given interfaces are what your implementations should adhere to. Do NOT change the interface.
 3. The same interface should be used for both dynamic table implementations.
